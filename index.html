@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Alejandra — diseñadora UX/UI, diseño gráfico y frontend developer. La Plata, Argentina.">
+
+  <title>Ale — Diseño + Código</title>
+
+  <!-- Fuentes: preconnect primero, luego carga -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Cutive+Mono&display=swap" rel="stylesheet">
+
+  <!-- CSS compilado -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- =========================================================
+    Navegación
+  ========================================================== -->
+  <header class="site-nav" role="banner">
+    <div class="container">
+      <nav class="site-nav__inner" aria-label="Navegación principal">
+        <a href="/" class="site-nav__logo">ALE.</a>
+        <ul class="site-nav__links" role="list">
+          <li><a href="#proyectos" class="site-nav__link is-active">Proyectos</a></li>
+          <li><a href="#sobre-mi" class="site-nav__link">About</a></li>
+          <li><a href="#contacto" class="site-nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+      Hero
+    ========================================================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero__inner">
+
+          <div>
+            <span class="eyebrow">Diseño · Código · La Plata, Argentina</span>
+            <h1 class="hero__heading" id="hero-heading">
+              Diseño que<br>
+              <span class="hero__accent">implementa.</span>
+            </h1>
+          </div>
+
+          <p class="intro">
+            Diseñadora UX/UI y de comunicación visual, con foco en desarrollo frontend.
+            Trabajo en el cruce entre sistemas de diseño y código limpio.
+          </p>
+
+          <div class="hero__meta">
+            <span class="tag">UX/UI</span>
+            <span class="tag">Branding</span>
+            <span class="tag">Frontend</span>
+            <span class="tag">Figma</span>
+            <span class="tag">React</span>
+          </div>
+
+          <a href="#proyectos" class="hero__cta" aria-label="Ver proyectos">
+            Ver proyectos →
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      Proyectos — UX/UI y Web
+    ========================================================== -->
+    <section class="section" id="proyectos" aria-labelledby="uxui-heading">
+      <div class="container">
+
+        <div class="discipline-label">
+          <span class="discipline-label__text">UX/UI · Web design</span>
+          <span class="discipline-label__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- App Formosa V2 — featured -->
+          <article class="project-card project-card--featured">
+            <div class="project-card__image">
+              <!-- Reemplazar src con imagen real en WebP -->
+              <img
+                src="assets/images/formosa-cover.webp"
+                alt="App Formosa V2 — pantallas del rediseño de la app de relevamiento catastral"
+                width="800"
+                height="500"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="eyebrow project-card__eyebrow">UX/UI · Figma · 2024</span>
+              <h2 class="project-card__title">App Formosa V2</h2>
+              <p class="project-card__desc">
+                Rediseño del sistema de relevamiento catastral para la Provincia de Formosa.
+                Constraints reales: dispositivos de gama baja, sin conexión, usuarios de campo.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">UX Research</span>
+                <span class="tag">Sistema de componentes</span>
+                <span class="tag">WCAG AA</span>
+                <span class="tag">Offline-first</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ranzuglia SRL -->
+          <article class="project-card">
+            <div class="project-card__image">
+              <img
+                src="assets/images/ranzuglia-cover.webp"
+                alt="Ranzuglia SRL — sitio web de maquinaria agrícola"
+                width="600"
+                height="450"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="eyebrow project-card__eyebrow">Web design · IA · 2024</span>
+              <h2 class="project-card__title">Ranzuglia SRL</h2>
+              <p class="project-card__desc">
+                Web para empresa de maquinaria agrícola. Diseño asistido con IA — criterio
+                sobre cuándo y cómo integrarla sin perder control del resultado.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Figma Make</span>
+                <span class="tag">HTML/SCSS</span>
+                <span class="tag">IA generativa</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- =========================================================
+      Proyectos — Diseño gráfico
+    ========================================================== -->
+    <section class="section" aria-labelledby="grafico-heading">
+      <div class="container">
+
+        <div class="discipline-label">
+          <span class="discipline-label__text">Diseño gráfico · Branding</span>
+          <span class="discipline-label__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Branding + packaging -->
+          <article class="project-card">
+            <div class="project-card__image">
+              <img
+                src="assets/images/branding-packaging-cover.webp"
+                alt="Branding y packaging — identidad visual de producto"
+                width="600"
+                height="450"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="eyebrow project-card__eyebrow">Branding · Packaging · Illustrator</span>
+              <h2 class="project-card__title">Branding + packaging</h2>
+              <p class="project-card__desc">
+                Identidad visual aplicada a producto físico. Sistema de marca
+                que funciona en pantalla, en impresión y en superficie.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Identidad visual</span>
+                <span class="tag">Packaging</span>
+                <span class="tag">Sistema de marca</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Canal de streaming -->
+          <article class="project-card">
+            <div class="project-card__image">
+              <img
+                src="assets/images/streaming-cover.webp"
+                alt="Branding canal de streaming — sistema de piezas gráficas"
+                width="600"
+                height="450"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="eyebrow project-card__eyebrow">Branding · Motion · Illustrator</span>
+              <h2 class="project-card__title">Canal de streaming</h2>
+              <p class="project-card__desc">
+                Branding digital para canal de contenido. Coherencia de sistema
+                en piezas estáticas, animadas y en distintos formatos de pantalla.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Branding digital</span>
+                <span class="tag">Motion</span>
+                <span class="tag">Sistema de piezas</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- =========================================================
+      About
+    ========================================================== -->
+    <section class="section" id="sobre-mi" aria-labelledby="about-heading">
+      <div class="container">
+
+        <span class="eyebrow">Sobre mí</span>
+        <div class="about__grid">
+
+          <div class="about__bio">
+            <h2 id="about-heading">Diseño con criterio.<br>Código con intención.</h2>
+            <p>
+              Soy Alejandra, diseñadora UX/UI y de comunicación visual con base en
+              La Plata. Trabajo en el cruce entre el diseño de sistemas y la implementación
+              frontend — lo que me permite llevar proyectos desde el brief hasta el deploy.
+            </p>
+            <p>
+              Actualmente en transición activa hacia desarrollo frontend, con trabajo real
+              en componentes React en producción. El diseño no desaparece — se convierte
+              en criterio de código.
+            </p>
+            <div class="hero__meta" style="margin-top: 0;">
+              <span class="tag">Figma</span>
+              <span class="tag">HTML/SCSS</span>
+              <span class="tag">React</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">WordPress</span>
+            </div>
+          </div>
+
+          <div class="about__credentials">
+
+            <div class="credential">
+              <span class="credential__role">Layout Designer</span>
+              <span class="credential__company">CTI Latam · 2023 – presente</span>
+              <p class="credential__desc">
+                Estilos y modificaciones de componentes en React/Tailwind dentro
+                de arquitectura de microfrontends. Trabajo en producción, código real.
+              </p>
+            </div>
+
+            <div class="credential">
+              <span class="credential__role">Contribuidor de estilos</span>
+              <span class="credential__company">InHub Design System</span>
+              <p class="credential__desc">
+                Implementación de tokens y overrides de componentes en un
+                design system de escala enterprise.
+              </p>
+            </div>
+
+            <div class="credential">
+              <span class="credential__role">Diseñadora freelance</span>
+              <span class="credential__company">2019 – presente</span>
+              <p class="credential__desc">
+                UX/UI, branding, packaging y web para clientes de Argentina y la región.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- =========================================================
+      Contacto
+    ========================================================== -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner">
+          <div>
+            <span class="eyebrow" style="color: rgba(245,244,240,0.45);">Contacto</span>
+            <h2 class="contact__heading" id="contact-heading">
+              ¿Trabajamos<br>juntos?
+            </h2>
+            <p class="contact__sub intro" style="margin-top: 1rem;">
+              Abierta a proyectos freelance y oportunidades de frontend.
+            </p>
+          </div>
+          <a href="mailto:hola@alejandra.design" class="contact__link">
+            hola@alejandra.design →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+    Footer
+  ========================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy">© 2024 Alejandra</span>
+        <nav class="site-footer__links" aria-label="Links externos">
+          <a href="https://linkedin.com/in/" class="site-footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/" class="site-footer__link" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://read.cv/" class="site-footer__link" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

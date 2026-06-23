@@ -1,0 +1,11 @@
+// =============================================================================
+// main.scss — entry point
+// Solo @use. Sin lógica, sin valores hardcodeados.
+// Orden importa: tokens → reset → tipo → layout → componentes
+// =============================================================================
+
+@use 'tokens';
+@use 'reset';
+@use 'typography';
+@use 'layout';
+@use 'components';
