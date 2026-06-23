@@ -54,17 +54,43 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-  padding-block: var(--space-32) var(--space-24);
+  padding-block: var(--space-16);
   border-bottom: 1px solid var(--color-stone);
+  background-color: var(--color-ink);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  h1,
+  .intro {
+    color: var(--color-paper);
+  }
+
+  .eyebrow {
+    color: rgba(245, 244, 240, 0.45);
+  }
+
+  .tag {
+    border-color: rgba(245, 244, 240, 0.2);
+    color: rgba(245, 244, 240, 0.55);
+  }
 
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: var(--space-8);
+    gap: var(--space-12);
   }
 
   &__heading {
     // hereda de h1 en _typography.scss
+  }
+
+  &__break {
+    display: inline;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 
   // Acento de color en una palabra del h1
@@ -88,8 +114,8 @@
     font-size: var(--text-xs);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-ink);
-    border-bottom: 1px solid var(--color-ink);
+    color: var(--color-paper);
+    border-bottom: 1px solid var(--color-paper);
     padding-bottom: 2px;
     transition: color var(--duration-fast) var(--ease-out),
                 border-color var(--duration-fast) var(--ease-out);
