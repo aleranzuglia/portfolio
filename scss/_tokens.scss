@@ -8,11 +8,13 @@
   // ---------------------------------------------------------------------------
   // Colores
   // ---------------------------------------------------------------------------
-  --color-ink:    #0F0F0F;   // texto principal, nav, fondos oscuros
-  --color-paper:  #F5F4F0;   // fondo base
-  --color-stone:  #ECEAE4;   // cards, separadores, hover states
-  --color-slate:  #6B6B6B;   // texto secundario, labels, captions
-  --color-charge: #C8FA64;   // acento único — máximo 2-3 usos por página
+  --color-ink:      #0F0F0F;   // fondo base de todo el sitio
+  --color-paper:   #F5F4F0;   // texto principal
+  --color-stone:   #ECEAE4;   // separadores, hover states
+  --color-slate:   #6B6B6B;   // texto secundario, labels, captions
+  --color-charge:  #C8FA64;   // acento único — máximo 2-3 usos por página
+  --color-surface:   #1A1A1A; // superficies elevadas sobre ink
+  --color-surface-2: #242424; // superficies de segundo nivel
 
   // ---------------------------------------------------------------------------
   // Tipografía
@@ -21,13 +23,13 @@
   --font-body:    'Cutive Mono', monospace;
 
   // Escala
-  --text-xs:   0.6875rem;              // 11px — eyebrows, captions, meta
-  --text-sm:   0.8125rem;              // 13px — body (Cutive Mono es ancha)
+  --text-xs:   0.75rem;              // 11px — eyebrows, captions, meta
+  --text-sm:   0.875rem;              // 13px — body (Cutive Mono es ancha)
   --text-base: 1rem;                   // 16px — intro, body largo
-  --text-lg:   1.125rem;               // 18px — h3, nav logo
+  --text-lg:   1.25rem;               // 18px — h3, nav logo
   --text-xl:   1.875rem;               // 30px — h2 de sección
-  --text-2xl:  clamp(2rem, 4vw, 2.5rem);       // h1 interior de página
-  --text-3xl:  clamp(4rem, 11vw, 8rem);          // h1 hero
+  --text-2xl:  clamp(2rem, 4vw, 3.5rem);       // h1 interior de página
+  --text-3xl:  clamp(4rem, 11vw, 10rem);          // h1 hero
 
   // ---------------------------------------------------------------------------
   // Espaciado — base 4px
@@ -46,7 +48,7 @@
   // ---------------------------------------------------------------------------
   // Layout
   // ---------------------------------------------------------------------------
-  --max-width:      1200px;
+  --max-width:      1500px;
   --gutter:         clamp(1.5rem, 5vw, 4rem);
   --col-text:       560px;   // max-width para columnas de body (Cutive Mono ancha)
 

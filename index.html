@@ -23,10 +23,10 @@
   <header class="site-nav" role="banner">
     <div class="container">
       <nav class="site-nav__inner" aria-label="Navegación principal">
-        <a href="/" class="site-nav__logo">ALE.</a>
+        <a href="/" class="site-nav__logo">Alejandra Ranzuglia</a>
         <ul class="site-nav__links" role="list">
           <li><a href="#proyectos" class="site-nav__link is-active">Proyectos</a></li>
-          <li><a href="#sobre-mi" class="site-nav__link">About</a></li>
+          <li><a href="#sobre-mi" class="site-nav__link">Sobre mí</a></li>
           <li><a href="#contacto" class="site-nav__link">Contacto</a></li>
         </ul>
       </nav>
@@ -39,183 +39,78 @@
       Hero
     ========================================================== -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="hero__inner">
-
-          <div>
-            <span class="eyebrow">Diseño · Código · La Plata, Argentina</span>
-            <h1 class="hero__heading">
-              Especialista en<br>
-              <span class="hero__rotating" aria-live="polite">Branding</span>
-            </h1>
-          </div>
-
-          <p class="intro">
-            Diseñadora UX/UI y de comunicación visual, con foco en desarrollo frontend.
-            Trabajo en el cruce entre sistemas de diseño y código limpio.
-          </p>
-
-          <div class="hero__meta">
-            <span class="tag">UX/UI</span>
-            <span class="tag">Branding</span>
-            <span class="tag">Frontend</span>
-            <span class="tag">Figma</span>
-            <span class="tag">React</span>
-          </div>
-
-          <a href="#proyectos" class="hero__cta" aria-label="Ver proyectos">
-            Ver proyectos →
-          </a>
-
+      <span class="hero__number">00 / MMXXVI</span>
+      <h1 class="hero__heading" id="hero-heading">
+        Especialista en<br>
+        <span class="hero__rotating" aria-live="polite">Branding</span>
+      </h1>
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Quién</span>
+          <span class="hero__meta-value">Alejandra</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Qué</span>
+          <span class="hero__meta-value">UX/UI · Branding · Frontend</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Dónde</span>
+          <span class="hero__meta-value">La Plata, Argentina</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Disponibilidad</span>
+          <span class="hero__meta-value">Freelance · Abierta a ofertas</span>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-      Proyectos — UX/UI y Web
+      Proyectos
     ========================================================== -->
-    <section class="section" id="proyectos" aria-labelledby="uxui-heading">
+    <section class="section" id="proyectos">
       <div class="container">
-
+        <span class="section-number">01 / Proyectos</span>
         <div class="discipline-label">
-          <span class="discipline-label__text">UX/UI · Web design</span>
-          <span class="discipline-label__line" aria-hidden="true"></span>
+          <span class="discipline-label__text">UX/UI · Web</span>
+          <span class="discipline-label__line"></span>
         </div>
-
-        <div class="projects-grid">
-
-          <!-- App Formosa V2 — featured -->
-          <article class="project-card project-card--featured" data-reveal>
-            <div class="project-card__image">
-              <!-- Reemplazar src con imagen real en WebP -->
-              <img
-                src="assets/images/formosa-cover.webp"
-                alt="App Formosa V2 — pantallas del rediseño de la app de relevamiento catastral"
-                width="800"
-                height="500"
-                loading="lazy"
-              >
-            </div>
-            <div class="project-card__body">
-              <span class="eyebrow project-card__eyebrow">UX/UI · Figma · 2024</span>
-              <h2 class="project-card__title">App Formosa V2</h2>
-              <p class="project-card__desc">
-                Rediseño del sistema de relevamiento catastral para la Provincia de Formosa.
-                Constraints reales: dispositivos de gama baja, sin conexión, usuarios de campo.
-              </p>
-              <div class="project-card__tags">
-                <span class="tag">UX Research</span>
-                <span class="tag">Sistema de componentes</span>
-                <span class="tag">WCAG AA</span>
-                <span class="tag">Offline-first</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Ranzuglia SRL -->
-          <article class="project-card" data-reveal>
-            <div class="project-card__image">
-              <img
-                src="assets/images/ranzuglia-cover.webp"
-                alt="Ranzuglia SRL — sitio web de maquinaria agrícola"
-                width="600"
-                height="450"
-                loading="lazy"
-              >
-            </div>
-            <div class="project-card__body">
-              <span class="eyebrow project-card__eyebrow">Web design · IA · 2024</span>
-              <h2 class="project-card__title">Ranzuglia SRL</h2>
-              <p class="project-card__desc">
-                Web para empresa de maquinaria agrícola. Diseño asistido con IA — criterio
-                sobre cuándo y cómo integrarla sin perder control del resultado.
-              </p>
-              <div class="project-card__tags">
-                <span class="tag">Figma Make</span>
-                <span class="tag">HTML/SCSS</span>
-                <span class="tag">IA generativa</span>
-              </div>
-            </div>
-          </article>
-
+        <div class="project-list">
+          <div class="project-list__item" data-preview="assets/images/formosa-cover.webp">
+            <span class="project-list__num">01</span>
+            <span class="project-list__title">App Formosa V2</span>
+            <span class="project-list__category">UX/UI · Figma</span>
+            <span class="project-list__arrow">→</span>
+          </div>
+          <div class="project-list__item" data-preview="assets/images/ranzuglia-cover.webp">
+            <span class="project-list__num">02</span>
+            <span class="project-list__title">Ranzuglia SRL</span>
+            <span class="project-list__category">Web · IA</span>
+            <span class="project-list__arrow">→</span>
+          </div>
         </div>
-
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- =========================================================
-      Proyectos — Diseño gráfico
-    ========================================================== -->
-    <section class="section" aria-labelledby="grafico-heading">
-      <div class="container">
-
-        <div class="discipline-label">
+        <div class="discipline-label" style="margin-top: var(--space-12)">
           <span class="discipline-label__text">Diseño gráfico · Branding</span>
-          <span class="discipline-label__line" aria-hidden="true"></span>
+          <span class="discipline-label__line"></span>
         </div>
-
-        <div class="projects-grid">
-
-          <!-- Branding + packaging -->
-          <article class="project-card" data-reveal>
-            <div class="project-card__image">
-              <img
-                src="assets/images/branding-packaging-cover.webp"
-                alt="Branding y packaging — identidad visual de producto"
-                width="600"
-                height="450"
-                loading="lazy"
-              >
-            </div>
-            <div class="project-card__body">
-              <span class="eyebrow project-card__eyebrow">Branding · Packaging · Illustrator</span>
-              <h2 class="project-card__title">Branding + packaging</h2>
-              <p class="project-card__desc">
-                Identidad visual aplicada a producto físico. Sistema de marca
-                que funciona en pantalla, en impresión y en superficie.
-              </p>
-              <div class="project-card__tags">
-                <span class="tag">Identidad visual</span>
-                <span class="tag">Packaging</span>
-                <span class="tag">Sistema de marca</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Canal de streaming -->
-          <article class="project-card" data-reveal>
-            <div class="project-card__image">
-              <img
-                src="assets/images/streaming-cover.webp"
-                alt="Branding canal de streaming — sistema de piezas gráficas"
-                width="600"
-                height="450"
-                loading="lazy"
-              >
-            </div>
-            <div class="project-card__body">
-              <span class="eyebrow project-card__eyebrow">Branding · Motion · Illustrator</span>
-              <h2 class="project-card__title">Canal de streaming</h2>
-              <p class="project-card__desc">
-                Branding digital para canal de contenido. Coherencia de sistema
-                en piezas estáticas, animadas y en distintos formatos de pantalla.
-              </p>
-              <div class="project-card__tags">
-                <span class="tag">Branding digital</span>
-                <span class="tag">Motion</span>
-                <span class="tag">Sistema de piezas</span>
-              </div>
-            </div>
-          </article>
-
+        <div class="project-list">
+          <div class="project-list__item" data-preview="assets/images/branding-packaging-cover.webp">
+            <span class="project-list__num">03</span>
+            <span class="project-list__title">Branding + packaging</span>
+            <span class="project-list__category">Identidad · Packaging</span>
+            <span class="project-list__arrow">→</span>
+          </div>
+          <div class="project-list__item" data-preview="assets/images/streaming-cover.webp">
+            <span class="project-list__num">04</span>
+            <span class="project-list__title">Canal de streaming</span>
+            <span class="project-list__category">Branding · Motion</span>
+            <span class="project-list__arrow">→</span>
+          </div>
         </div>
-
+      </div>
+      <div class="project-preview" id="projectPreview">
+        <img src="" alt="" id="projectPreviewImg">
       </div>
     </section>
-
-    <hr class="section-divider">
 
     <!-- =========================================================
       About
