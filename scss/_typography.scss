@@ -37,7 +37,7 @@ p {
   font-family: var(--font-body);
   font-size: var(--text-sm);
   line-height: 1.8;
-  color: var(--color-ink);
+  color: var(--color-stone);
   max-width: var(--col-text);
 }
 
@@ -83,6 +83,13 @@ figcaption {
   border: 1px solid var(--color-stone);
   color: var(--color-slate);
   line-height: 1;
+
+  &--skill {
+    background: rgba(200, 250, 100, 0.3);
+    border: none;
+    border-radius: 9999px;
+    color: #C8FA64;
+  }
 }
 
 // Intro — párrafo de bajada más grande que el body estándar

@@ -23,7 +23,7 @@
   &__logo {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     letter-spacing: 0.04em;
     color: var(--color-paper);
     transition: color var(--duration-fast) var(--ease-out);
@@ -97,6 +97,10 @@
   background-color: rgba(245,244,240,0.08);
   border-top: 1px solid rgba(245,244,240,0.08);
   margin-top: var(--space-16);
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .hero__meta-item {
@@ -228,11 +232,31 @@
     height: 1px;
     background-color: var(--color-stone);
   }
+
+  &--spaced {
+    margin-top: var(--space-12);
+  }
 }
 
 
 // About
 // -----------------------------------------------------------------------------
+
+.hero__meta--compact {
+  margin-top: 0;
+}
+
+.hero__meta--offset {
+  margin-top: var(--space-6);
+}
+
+.eyebrow--soft {
+  color: rgba(245, 244, 240, 0.45);
+}
+
+.contact__sub--spaced {
+  margin-top: var(--space-4);
+}
 
 .about {
   &__grid {
@@ -243,6 +267,10 @@
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
       gap: var(--space-16);
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 5vw, 5rem);
     }
   }
 
@@ -265,13 +293,13 @@
   flex-direction: column;
   gap: var(--space-1);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--color-stone);
+  border-top: 1px solid rgba(245,244,240,0.15);
 
   &__role {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: var(--text-lg);
-    color: var(--color-ink);
+    color: var(--color-paper);
   }
 
   &__company {
@@ -314,6 +342,7 @@
 
   &__heading {
     color: var(--color-paper);
+    font-size: clamp(3rem, 7vw, 7rem);
   }
 
   &__sub {
@@ -491,4 +520,106 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.tag:hover {
+  border-color: var(--color-charge);
+  color: var(--color-charge);
+  transition: color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+}
+
+
+// Project feature — layout editorial por proyecto
+// -----------------------------------------------------------------------------
+
+.project-feature {
+  padding-block: var(--space-16);
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--color-paper);
+    margin-top: var(--space-2);
+  }
+
+  &__desc {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: 1.8;
+    color: rgba(245,244,240,0.55);
+    max-width: var(--col-text);
+    align-self: end;
+  }
+
+  &__hero {
+    width: 100%;
+    overflow: hidden;
+    max-width: 1500px;
+    margin-inline: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.5s var(--ease-out), transform var(--duration-slow) var(--ease-out);
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-top: 4px;
+    max-width: 1500px;
+    margin-inline: auto;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__grid-item {
+    overflow: hidden;
+    aspect-ratio: 4/3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.5s var(--ease-out), transform var(--duration-slow) var(--ease-out);
+
+      &:hover {
+        filter: grayscale(0%);
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+
+.project-divider {
+  border: none;
+  border-top: 1px solid rgba(245,244,240,0.08);
+  margin-block: 0;
 }

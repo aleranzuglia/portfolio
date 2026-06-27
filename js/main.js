@@ -38,10 +38,10 @@
   spotlight.style.cssText = `
     position: fixed;
     pointer-events: none;
-    width: 300px;
-    height: 300px;
+    width: 800px;
+    height: 800px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,250,100,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(200,250,100,0.06) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     z-index: 9999;
     transition: opacity 0.3s ease;
@@ -88,10 +88,10 @@
   style.textContent = `
     [data-reveal] {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(32px);
       transition:
-        opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
     [data-reveal].is-visible {
       opacity: 1;
@@ -109,7 +109,7 @@
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.08 }
   );
 
   els.forEach((el) => observer.observe(el));
@@ -147,18 +147,30 @@
   if (!el) return;
   const words = ['Branding','Packaging','Web design','UX/UI','Frontend'];
   let i = 0;
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes wordSlideIn {
+      from { transform: translateY(110%); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .hero__rotating {
+      display: inline-block;
+      overflow: visible;
+      vertical-align: bottom;
+      padding-bottom: 0.15em;
+    }
+    .hero__rotating.is-animating {
+      animation: wordSlideIn 0.45s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+  `;
+  document.head.appendChild(style);
   function next() {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(8px)';
-    setTimeout(() => {
-      i = (i + 1) % words.length;
-      el.textContent = words[i];
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-    }, 300);
+    el.classList.remove('is-animating');
+    void el.offsetWidth;
+    i = (i + 1) % words.length;
+    el.textContent = words[i];
+    el.classList.add('is-animating');
   }
-  el.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-  el.style.display = 'inline-block';
-  el.style.color = 'var(--color-charge)';
-  setInterval(next, 2000);
+  el.classList.add('is-animating');
+  setInterval(next, 2200);
 })();

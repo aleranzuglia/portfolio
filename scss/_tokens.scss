@@ -23,11 +23,11 @@
   --font-body:    'Cutive Mono', monospace;
 
   // Escala
-  --text-xs:   0.75rem;              // 11px — eyebrows, captions, meta
-  --text-sm:   0.875rem;              // 13px — body (Cutive Mono es ancha)
-  --text-base: 1rem;                   // 16px — intro, body largo
-  --text-lg:   1.25rem;               // 18px — h3, nav logo
-  --text-xl:   1.875rem;               // 30px — h2 de sección
+  --text-xs:   0.875rem;
+  --text-sm:   0.975rem;
+  --text-base: 1.125rem;
+  --text-lg:   1.65rem;
+  --text-xl:   2.5rem;
   --text-2xl:  clamp(2rem, 4vw, 3.5rem);       // h1 interior de página
   --text-3xl:  clamp(4rem, 11vw, 10rem);          // h1 hero
 
@@ -48,7 +48,7 @@
   // ---------------------------------------------------------------------------
   // Layout
   // ---------------------------------------------------------------------------
-  --max-width:      1500px;
+  --max-width:      2200px;
   --gutter:         clamp(1.5rem, 5vw, 4rem);
   --col-text:       560px;   // max-width para columnas de body (Cutive Mono ancha)
 
