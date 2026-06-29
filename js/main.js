@@ -3,6 +3,31 @@
 // Vanilla JS, sin dependencias. Defer en el HTML.
 // =============================================================================
 
+// Nav: menú hamburguesa para mobile
+// -----------------------------------------------------------------------------
+(function initBurger() {
+  const burger = document.querySelector('.site-nav__burger');
+  const links  = document.getElementById('nav-links');
+  if (!burger || !links) return;
+
+  burger.addEventListener('click', () => {
+    const open = burger.classList.toggle('is-open');
+    links.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  links.querySelectorAll('.site-nav__link').forEach((link) => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('is-open');
+      links.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+
+
 // Nav: active state según sección visible
 // -----------------------------------------------------------------------------
 (function initNavActive() {
