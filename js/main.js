@@ -3,6 +3,28 @@
 // Vanilla JS, sin dependencias. Defer en el HTML.
 // =============================================================================
 
+// Cursor spotlight
+// -----------------------------------------------------------------------------
+const cursor = document.createElement('div');
+cursor.className = 'cursor-spotlight';
+document.body.appendChild(cursor);
+
+let mouseX = 0, mouseY = 0;
+let curX = 0, curY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursor() {
+  curX += (mouseX - curX) * 0.12;
+  curY += (mouseY - curY) * 0.12;
+  cursor.style.transform = `translate(${curX}px, ${curY}px)`;
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
 // Nav: menú hamburguesa para mobile
 // -----------------------------------------------------------------------------
 (function initBurger() {
