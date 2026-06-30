@@ -735,7 +735,7 @@ figcaption {
   background: rgba(200, 250, 100, 0.3);
   border: none;
   border-radius: 9999px;
-  color: #C8FA64;
+  color: #c8fa64;
 }
 .tag:hover {
   border-color: var(--color-charge);
@@ -952,58 +952,20 @@ figcaption {
 
 .case-study__screens {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3);
-  align-items: end;
-}
-@media (max-width: 767px) {
-  .case-study__screens {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-.case-study__screens--grid {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
   align-items: start;
 }
 @media (max-width: 767px) {
-  .case-study__screens--grid {
-    grid-template-columns: repeat(2, 1fr);
+  .case-study__screens {
+    grid-template-columns: 1fr;
   }
 }
 
-.case-study__screen {
-  position: relative;
-  border-radius: 32px;
-  overflow: hidden;
-  background: #1a1a1a;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 0 2px rgba(0, 0, 0, 0.8), 0 32px 80px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-.case-study__screen::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
-  height: 28px;
-  background: #0a0a0a;
-  border-radius: 0 0 20px 20px;
-  z-index: 2;
-}
-.case-study__screen::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.03) 100%);
-  border-radius: 32px;
-  pointer-events: none;
-  z-index: 3;
-}
 .case-study__screen img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 30px;
   transition: transform var(--duration-slow) var(--ease-out);
 }
 .case-study__screen:hover img {
@@ -1064,3 +1026,5 @@ figcaption {
   color: rgba(245, 244, 240, 0.6);
   max-width: 100%;
 }
+
+/*# sourceMappingURL=main.css.map */
