@@ -1,0 +1,59 @@
+# Alejandra Ranzuglia — Portfolio
+
+> Diseñadora UX/UI y branding freelance.
+> Base: La Plata, Buenos Aires, Argentina.
+> Disponible para proyectos remotos y presenciales.
+
+## Quién soy
+
+Alejandra Ranzuglia (Ale Ranzu) es diseñadora UX/UI y diseñadora gráfica con experiencia
+en diseño de productos digitales, branding y packaging. Trabaja de forma freelance desde
+La Plata, Argentina, y acepta proyectos remotos para clientes de cualquier región.
+
+Combina criterio de sistema —identidad visual, tokens de diseño, componentes reutilizables—
+con capacidad de implementación en código.
+
+## Servicios
+
+- **UX/UI Design**: investigación de usuarios, flujos, wireframes, prototipos en Figma,
+  diseño de interfaces para apps Android e iOS y sistemas web.
+- **Branding**: identidad visual, manual de marca, naming, aplicaciones digitales y físicas.
+- **Packaging**: diseño de envases y etiquetas para productos cosméticos, alimenticios
+  y editoriales.
+
+## Proyectos destacados
+
+### App Formosa V2
+Diseño UX/UI para app Android del Gobierno de la Provincia de Formosa (Argentina).
+126 pantallas en alta fidelidad. Sistema offline-first para agrimensores e inspectores
+municipales. Material Design 3. Implementado en producción.
+
+### Klasse
+Branding y packaging para marca de electrodomésticos premium con tres verticales:
+línea blanca, tecnología y herramientas. Sistema de identidad con color coding,
+manual de marca y packaging para 9 productos. Implementado.
+
+### LaCa
+Identidad visual para canal de streaming político independiente con 115.000 seguidores
+en Instagram. Sistema de marca para piezas digitales, motion y merchandising.
+
+### Ama
+Branding y packaging para línea de biocosmética y medicina natural ayurvédica.
+Tres verticales por biotipo (Vata, Pitta, Kapha). Manual de marca, packaging para
+4 formatos y papelería. Implementado.
+
+### She
+Identidad visual para organizadora de eventos sociales y bodas destino en la Patagonia
+argentina. Marca editorial con aplicación en indumentaria, papelería de alta calidad
+y merchandising exclusivo. Implementado.
+
+## Herramientas
+
+Figma · Illustrator · HTML · SCSS · Material Design 3 · Design Tokens · Git
+
+## Contacto
+
+- Email: hola@alejandra.design
+- LinkedIn: https://www.linkedin.com/in/aleranzu
+- GitHub: https://github.com/aleranzuglia
+- Portfolio: https://aleranzu.com/

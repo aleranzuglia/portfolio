@@ -862,6 +862,10 @@
     display: block;
     filter: grayscale(100%);
     transition: filter 0.4s ease, transform 0.5s ease;
+
+    @media (hover: none) {
+      filter: grayscale(0%);
+    }
   }
 
   &:hover img {
@@ -872,7 +876,7 @@
 
 .case-study__screens:not(.case-study__screens--full) {
   .case-study__screen {
-    height: 380px;
+    height: 500px;
 
     img {
       width: 100%;
@@ -886,7 +890,7 @@
 @media (max-width: 767px) {
   .case-study__screens:not(.case-study__screens--full) {
     .case-study__screen {
-      height: 260px;
+      height: auto;
     }
   }
 }
