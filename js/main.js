@@ -199,3 +199,87 @@
   el.classList.add('is-animating');
   setInterval(next, 2200);
 })();
+
+
+// Animated counters
+// -----------------------------------------------------------------------------
+(function initCounters() {
+  function animateCounter(el, target, duration) {
+    duration = duration || 1400;
+    var start = performance.now();
+    function update(now) {
+      var progress = Math.min((now - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target);
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(update);
+  }
+
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target, parseInt(entry.target.dataset.count));
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-count]').forEach(function(el) {
+    counterObserver.observe(el);
+  });
+})();
+
+
+// Custom cursor
+// -----------------------------------------------------------------------------
+(function initCustomCursor() {
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  var cursorDot = document.createElement('div');
+  cursorDot.className = 'cursor-dot';
+  var cursorRing = document.createElement('div');
+  cursorRing.className = 'cursor-ring';
+  document.body.appendChild(cursorDot);
+  document.body.appendChild(cursorRing);
+
+  var targetX = 0, targetY = 0, ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    cursorDot.style.transform = 'translate(calc(' + targetX + 'px - 50%), calc(' + targetY + 'px - 50%))';
+  });
+
+  function animateCursorRing() {
+    ringX += (targetX - ringX) * 0.1;
+    ringY += (targetY - ringY) * 0.1;
+    cursorRing.style.transform = 'translate(calc(' + ringX + 'px - 50%), calc(' + ringY + 'px - 50%))';
+    requestAnimationFrame(animateCursorRing);
+  }
+  animateCursorRing();
+
+  document.querySelectorAll('a, button').forEach(function(el) {
+    el.addEventListener('mouseenter', function() {
+      cursorDot.classList.add('is-hovering');
+      cursorRing.classList.add('is-hovering');
+    });
+    el.addEventListener('mouseleave', function() {
+      cursorDot.classList.remove('is-hovering');
+      cursorRing.classList.remove('is-hovering');
+    });
+  });
+})();
+
+
+// "Ver →" label on project card images
+// -----------------------------------------------------------------------------
+(function initProjectCardLabels() {
+  document.querySelectorAll('.project-card__image').forEach(function(img) {
+    var label = document.createElement('span');
+    label.className = 'project-card__view-label';
+    label.textContent = 'Ver →';
+    img.appendChild(label);
+  });
+})();

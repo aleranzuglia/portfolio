@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Alejandra — diseñadora UX/UI, diseño gráfico y frontend developer. La Plata, Argentina.">
+  <meta name="description"
+    content="Portfolio de Alejandra — diseñadora UX/UI, diseño gráfico y frontend developer. La Plata, Argentina.">
 
   <title>Ale — Diseño + Código</title>
 
   <!-- Fuentes: preconnect primero, luego carga -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- CSS compilado -->
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
   <!-- =========================================================
@@ -71,124 +76,193 @@
       Proyectos
     ========================================================== -->
     <section class="section section-uxui" id="uxui">
-  <div class="container">
-    <span class="section-number">01 / UX/UI & Apps</span>
+      <div class="container">
+        <span class="section-number">01 / UX/UI & Apps</span>
 
-    <article class="case-study">
-      <div class="case-study__aside">
-        <span class="eyebrow">UX/UI · Android · 2024</span>
-        <h2 class="case-study__title">App Formosa V2</h2>
-        <p class="case-study__tagline">
-          Rediseño del sistema de relevamiento catastral para la Provincia de Formosa.
-        </p>
-        <dl class="case-study__meta">
-          <dt>Cliente</dt>
-          <dd>Igeo Consultora · Gobierno de Formosa</dd>
-          <dt>Rol</dt>
-          <dd>UX/UI Designer — única diseñadora</dd>
-          <dt>Plataforma</dt>
-          <dd>Android mobile</dd>
-          <dt>Duración</dt>
-          <dd>4 meses</dd>
-          <dt>Estado</dt>
-          <dd><span class="case-study__badge">Implementado</span></dd>
-        </dl>
-        <div class="case-study__tags">
-          <span class="tag">UX Research</span>
-          <span class="tag">Material Design 3</span>
-          <span class="tag">Figma</span>
-          <span class="tag">126 pantallas</span>
-          <span class="tag">Offline-first</span>
-        </div>
+        <article class="case-study">
+          <div class="case-study__aside">
+            <span class="eyebrow">UX/UI · Android · 2024</span>
+            <h2 class="case-study__title">App Formosa V2</h2>
+            <p class="case-study__tagline">App Android para trabajo de campo catastral. Offline-first · 2 roles · 126
+              pantallas · Implementado.</p>
+            <dl class="case-study__meta">
+              <dt>Cliente</dt>
+              <dd>Igeo Consultora · Gobierno de Formosa</dd>
+              <dt>Rol</dt>
+              <dd>UX/UI Designer — única diseñadora</dd>
+              <dt>Plataforma</dt>
+              <dd>Android mobile</dd>
+              <dt>Duración</dt>
+              <dd>4 meses</dd>
+              <dt>Estado</dt>
+              <dd><span class="case-study__badge">Implementado</span></dd>
+            </dl>
+            <div class="case-study__tags">
+              <span class="tag">UX Research</span>
+              <span class="tag">Material Design 3</span>
+              <span class="tag">Figma</span>
+              <span class="tag">126 pantallas</span>
+              <span class="tag">Offline-first</span>
+            </div>
+          </div>
+
+          <div class="case-study__content">
+
+            <div class="cs-impact">
+              <div class="cs-impact__stat">
+                <span class="cs-impact__num" data-count="126">126</span>
+                <span class="cs-impact__label">pantallas<br>alta fidelidad</span>
+              </div>
+              <div class="cs-impact__stat">
+                <span class="cs-impact__num" data-count="2">2</span>
+                <span class="cs-impact__label">roles de<br>usuario</span>
+              </div>
+              <div class="cs-impact__stat">
+                <span class="cs-impact__num" data-count="4">4</span>
+                <span class="cs-impact__label">meses de<br>proyecto</span>
+              </div>
+              <div class="cs-impact__callout">
+                Prototipo usado directamente como referencia de desarrollo por el equipo técnico — <strong>sin
+                  iteraciones adicionales de especificación.</strong>
+              </div>
+            </div>
+
+            <div class="case-study__text" data-reveal>
+              <h3 class="case-study__h3">El proyecto</h3>
+              <p>El Gobierno de la Provincia de Formosa necesitaba modernizar el proceso de relevamiento catastral de
+                propiedades. El sistema existente era de escritorio y obligaba a los agrimensores a volver a la oficina
+                para cargar datos levantados en campo. La nueva versión debía funcionar desde el dispositivo móvil del
+                agrimensor y del inspector municipal, con capacidad de operar sin conexión y sincronizar con el sistema
+                central cuando hubiera red disponible.</p>
+            </div>
+
+            <div class="case-study__screens" data-reveal>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-registro.webp"
+                  alt="App Formosa — bienvenida y registro de dispositivo" loading="lazy">
+
+              </div>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-trabajo-en-campo.webp"
+                  alt="App Formosa — pantallas de trabajo en campo" loading="lazy">
+
+              </div>
+            </div>
+
+            <div class="case-study__text" data-reveal>
+              <h3 class="case-study__h3">El desafío</h3>
+              <p>La app debía servir a dos perfiles de usuario con necesidades distintas —agrimensores que trabajan en
+                campo bajo el sol y con guantes, e inspectores municipales que operan desde oficina— sobre el mismo
+                sistema de datos catastral. Los puntos críticos: autenticación robusta sin fricción en condiciones de
+                campo, flujo de trabajo completo sin perder datos, y un proceso de registro de dispositivo con
+                intervención presencial que el diseño tenía que anticipar antes de que el usuario llegara sin saberlo.
+              </p>
+            </div>
+
+            <div class="case-study__screens" data-reveal>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-fotos-y-ddjj.webp"
+                  alt="App Formosa — fotos del inmueble y DDJJ mejoras" loading="lazy">
+              </div>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-actividades.webp"
+                  alt="App Formosa — listas de actividades por rol" loading="lazy">
+
+              </div>
+            </div>
+
+            <div class="case-study__text" data-reveal>
+              <h3 class="case-study__h3">Decisiones de diseño</h3>
+              <div class="case-study__decision">
+                <h4>Biometría facial en lugar de huella dactilar</h4>
+                <p>Los agrimensores trabajan con las manos en condiciones que inutilizan el sensor de huella. El
+                  reconocimiento facial es más confiable en campo. Requirió diseñar una pantalla de captura con
+                  instrucciones claras de distancia y luz.</p>
+                <p class="decision__result">
+                  <span class="decision__result-label">Resultado ·</span>
+                  Autenticación funcional en condiciones de campo sin necesidad de quitarse los guantes.
+                </p>
+              </div>
+              <div class="case-study__decision">
+                <h4>Flujo de campo como checklist progresivo</h4>
+                <p>En lugar de un formulario único, el flujo se organizó en tres secciones con estado visible: fotos del
+                  inmueble, DDJJ Mejoras, Informe de estado parcelario. Cada sección muestra si está completa, pendiente
+                  o con error. El botón "Finalizar actividad" permanece deshabilitado hasta completar las secciones
+                  obligatorias.</p>
+                <p class="decision__result">
+                  <span class="decision__result-label">Resultado ·</span>
+                  Cero actividades enviadas con datos incompletos — el botón no habilita hasta completar las secciones
+                  obligatorias.
+                </p>
+              </div>
+              <div class="case-study__decision">
+                <h4>Sistema de errores en tres niveles</h4>
+                <p>Modales para errores bloqueantes que requieren decisión, banners informativos para avisos de
+                  contexto, y estados inline para errores de campo. Esto redujo las interrupciones en los flujos
+                  principales.</p>
+                <p class="decision__result">
+                  <span class="decision__result-label">Resultado ·</span>
+                  Menos interrupciones en los flujos críticos de campo — solo los errores bloqueantes detienen al
+                  usuario.
+                </p>
+              </div>
+              <div class="case-study__decision">
+                <h4>Diferenciación visual por rol</h4>
+                <p>Agrimensor y Municipal comparten la misma base de componentes, diferenciados con un badge de rol en
+                  el header — cyan para agrimensor, verde para municipal — visible en todas las pantallas de sesión
+                  activa.</p>
+                <p class="decision__result">
+                  <span class="decision__result-label">Resultado ·</span>
+                  Diferenciación de rol visible en todo momento — sin riesgo de confusión entre perfiles.
+                </p>
+              </div>
+            </div>
+
+            <div class="case-study__screens" data-reveal>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-errores.webp"
+                  alt="App Formosa — pantallas de error y validación" loading="lazy">
+              </div>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-mensajes.webp" alt="App Formosa — mensajes y confirmaciones"
+                  loading="lazy">
+              </div>
+                <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-biometria.webp"
+                  alt="App Formosa — pantallas de explicación de toma de foto para biometría y de toma foto" loading="lazy">
+              </div>
+              <div class="case-study__screen">
+                <img src="assets/images/uxui/formosa/mockup-perfil-y-sincro.webp" alt="App Formosa — datos de perfil y sincronización de tareas"
+                  loading="lazy">
+              </div>
+            </div>
+            <div class="case-study__text" data-reveal>
+              <h3 class="case-study__h3">El resultado</h3>
+              <p>
+                <strong>126 pantallas de alta fidelidad.</strong>
+                Flujos completos para ambos roles, todos los estados de error posibles, y el proceso completo de
+                registro, activación y desregistro de dispositivo.
+                <br><br>
+                El prototipo fue usado directamente como referencia de desarrollo por el equipo técnico de Igeo
+                Consultora — <strong>sin iteraciones adicionales de especificación</strong>. Hoy está implementado en el
+                sistema catastral de la provincia de Formosa.
+              </p>
+            </div>
+
+            <div class="case-study__text case-study__text--aprendizaje" data-reveal>
+              <h3 class="case-study__h3">Lo que aprendí</h3>
+              <p>Diseñar para trabajo de campo impone restricciones que el diseño de escritorio ignora: guantes, sol,
+                conexión intermitente, presión de tiempo. Cada decisión de interacción —tamaño de toque, número de
+                pasos, claridad del estado— tiene consecuencias reales cuando el usuario está parado en el medio de un
+                lote en Formosa a 40 grados. Ese contexto físico fue el criterio de validación de cada pantalla.</p>
+            </div>
+
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="case-study__content">
-
-        <div class="case-study__text" data-reveal>
-          <h3 class="case-study__h3">El proyecto</h3>
-          <p>El Gobierno de la Provincia de Formosa necesitaba modernizar el proceso de relevamiento catastral de propiedades. El sistema existente era de escritorio y obligaba a los agrimensores a volver a la oficina para cargar datos levantados en campo. La nueva versión debía funcionar desde el dispositivo móvil del agrimensor y del inspector municipal, con capacidad de operar sin conexión y sincronizar con el sistema central cuando hubiera red disponible.</p>
-        </div>
-
-        <div class="case-study__screens" data-reveal>
-          <div class="case-study__screen">
-            <img src="assets/images/uxui/formosa/mockup-trabajo-en-campo.webp"
-                 alt="App Formosa — pantallas de trabajo en campo"
-                 width="800" height="500" loading="lazy">
-          </div>
-          <div class="case-study__screen">
-            <img src="assets/images/uxui/formosa/mockup-actividades.webp"
-                 alt="App Formosa — listas de actividades por rol"
-                 width="800" height="500" loading="lazy">
-          </div>
-        </div>
-
-        <div class="case-study__text" data-reveal>
-          <h3 class="case-study__h3">El desafío</h3>
-          <p>La app debía servir a dos perfiles de usuario con necesidades distintas —agrimensores que trabajan en campo bajo el sol y con guantes, e inspectores municipales que operan desde oficina— sobre el mismo sistema de datos catastral. Los puntos críticos: autenticación robusta sin fricción en condiciones de campo, flujo de trabajo completo sin perder datos, y un proceso de registro de dispositivo con intervención presencial que el diseño tenía que anticipar antes de que el usuario llegara sin saberlo.</p>
-        </div>
-
-        <div class="case-study__screens" data-reveal>
-          <div class="case-study__screen">
-            <img src="assets/images/uxui/formosa/mockup-fotos-y-ddjj.webp"
-                 alt="App Formosa — fotos del inmueble y DDJJ mejoras"
-                 width="800" height="500" loading="lazy">
-          </div>
-          <div class="case-study__screen">
-            <img src="assets/images/uxui/formosa/mockup-mensajes.webp"
-                 alt="App Formosa — mensajes y confirmaciones"
-                 width="800" height="500" loading="lazy">
-          </div>
-        </div>
-
-        <div class="case-study__text" data-reveal>
-          <h3 class="case-study__h3">Decisiones de diseño</h3>
-          <div class="case-study__decision">
-            <h4>Biometría facial en lugar de huella dactilar</h4>
-            <p>Los agrimensores trabajan con las manos en condiciones que inutilizan el sensor de huella. El reconocimiento facial es más confiable en campo. Requirió diseñar una pantalla de captura con instrucciones claras de distancia y luz.</p>
-          </div>
-          <div class="case-study__decision">
-            <h4>Flujo de campo como checklist progresivo</h4>
-            <p>En lugar de un formulario único, el flujo se organizó en tres secciones con estado visible: fotos del inmueble, DDJJ Mejoras, Informe de estado parcelario. Cada sección muestra si está completa, pendiente o con error. El botón "Finalizar actividad" permanece deshabilitado hasta completar las secciones obligatorias.</p>
-          </div>
-          <div class="case-study__decision">
-            <h4>Sistema de errores en tres niveles</h4>
-            <p>Modales para errores bloqueantes que requieren decisión, banners informativos para avisos de contexto, y estados inline para errores de campo. Esto redujo las interrupciones en los flujos principales.</p>
-          </div>
-          <div class="case-study__decision">
-            <h4>Diferenciación visual por rol</h4>
-            <p>Agrimensor y Municipal comparten la misma base de componentes, diferenciados con un badge de rol en el header — cyan para agrimensor, verde para municipal — visible en todas las pantallas de sesión activa.</p>
-          </div>
-        </div>
-
-        <div class="case-study__text" data-reveal>
-          <h3 class="case-study__h3">El resultado</h3>
-          <p>La app fue implementada y desplegada para el sistema catastral de la provincia de Formosa. El diseño entregado incluyó 126 pantallas de alta fidelidad cubriendo los flujos completos de ambos roles, todos los estados de error posibles, y las pantallas de registro, activación y desregistro de dispositivo. El prototipo fue utilizado directamente como referencia de desarrollo por el equipo técnico de Igeo Consultora, sin necesidad de iteraciones adicionales de especificación.</p>
-        </div>
-
-        <div class="case-study__screens" data-reveal>
-          <div class="case-study__screen">
-            <img src="assets/images/uxui/formosa/mockup-errores.webp"
-                 alt="App Formosa — pantallas de error y validación"
-                 width="800" height="500" loading="lazy">
-          </div>
-          <div class="case-study__screen">
-            <img src="assets/images/uxui/formosa/mockup-registro.webp"
-                 alt="App Formosa — bienvenida y registro de dispositivo"
-                 width="800" height="500" loading="lazy">
-          </div>
-        </div>
-
-        <div class="case-study__text case-study__text--aprendizaje" data-reveal>
-          <h3 class="case-study__h3">Lo que aprendí</h3>
-          <p>Diseñar para trabajo de campo impone restricciones que el diseño de escritorio ignora: guantes, sol, conexión intermitente, presión de tiempo. Cada decisión de interacción —tamaño de toque, número de pasos, claridad del estado— tiene consecuencias reales cuando el usuario está parado en el medio de un lote en Formosa a 40 grados. Ese contexto físico fue el criterio de validación de cada pantalla.</p>
-        </div>
-
-      </div>
-    </article>
-  </div>
-</section>
-
-<hr class="section-divider">
+    <hr class="section-divider">
 
     <section class="section" id="proyectos">
       <div class="container">
@@ -208,39 +282,38 @@
           </div>
           <div class="project-feature__hero" data-reveal>
             <img src="assets/images/branding/klasse/brand-Klasse.webp"
-                 alt="Klasse — sistema de identidad visual completo"
-                 width="1600" height="900" loading="eager">
+              alt="Klasse — sistema de identidad visual completo" width="1600" height="900" loading="eager">
           </div>
           <div class="project-feature__grid" data-reveal>
             <div class="project-feature__grid-item">
               <img src="assets/images/branding/klasse/packaging_klasse_pava_electrica.webp"
-                   alt="Klasse — packaging pava eléctrica digital"
-                   width="800" height="600" loading="lazy">
+                alt="Klasse — packaging pava eléctrica digital"  loading="lazy">
             </div>
             <div class="project-feature__grid-item">
               <img src="assets/images/branding/klasse/packaging_klasse_cafetera_italiana.webp"
-                   alt="Klasse — packaging cafetera estilo italiano"
-                   width="800" height="600" loading="lazy">
+                alt="Klasse — packaging cafetera estilo italiano"  loading="lazy">
             </div>
             <div class="project-feature__grid-item">
               <img src="assets/images/branding/klasse/packaging_klasse_cafetera_filtro.webp"
-                   alt="Klasse — packaging cafetera de filtro"
-                   width="800" height="600" loading="lazy">
+                alt="Klasse — packaging cafetera de filtro"  loading="lazy">
             </div>
             <div class="project-feature__grid-item">
               <img src="assets/images/branding/klasse/packaging_klasse_mic_inalambricos.webp"
-                   alt="Klasse — packaging micrófono inalámbrico"
-                   width="800" height="600" loading="lazy">
+                alt="Klasse — packaging micrófono inalámbrico"  loading="lazy">
             </div>
             <div class="project-feature__grid-item">
               <img src="assets/images/branding/klasse/packaging_klasse_molinillo_cafe.webp"
-                   alt="Klasse — packaging molinillo de café"
-                   width="800" height="600" loading="lazy">
+                alt="Klasse — packaging molinillo de café"  loading="lazy">
             </div>
             <div class="project-feature__grid-item">
-              <img src="assets/images/branding/klasse/tostadora.webp"
-                   alt="Klasse — packaging tostadora"
-                   width="800" height="600" loading="lazy">
+              <img src="assets/images/branding/klasse/tostadora.webp" alt="Klasse — packaging tostadora" loading="lazy">
+            </div>
+             <div class="project-feature__grid-item">
+              <img src="assets/images/branding/klasse/compresor.webp"
+                alt="Klasse — packaging de compresor de aire"  loading="lazy">
+            </div>
+            <div class="project-feature__grid-item">
+              <img src="assets/images/branding/klasse/taladro.webp" alt="Klasse — packaging taladro" loading="lazy">
             </div>
           </div>
         </article>
@@ -260,30 +333,25 @@
             </p>
           </div>
           <div class="project-feature__hero" data-reveal>
-            <img src="assets/images/branding/ama/brand-Ama.webp"
-                 alt="Ama — sistema de identidad visual completo"
-                 width="1600" height="900" loading="lazy">
+            <img src="assets/images/branding/ama/brand-Ama.webp" alt="Ama — sistema de identidad visual completo"
+              width="1600" height="900" loading="lazy">
           </div>
           <div class="project-feature__grid" data-reveal>
             <div class="project-feature__grid-item">
-              <img src="assets/images/branding/ama/packaging_ama_varios.webp"
-                   alt="Ama — línea completa de packaging"
-                   width="800" height="600" loading="lazy">
+              <img src="assets/images/branding/ama/packaging_ama_varios.webp" alt="Ama — línea completa de packaging"
+                 loading="lazy">
             </div>
             <div class="project-feature__grid-item">
               <img src="assets/images/branding/ama/packaging_ama_crema_nutritiva.webp"
-                   alt="Ama — packaging crema nutritiva"
-                   width="800" height="600" loading="lazy">
+                alt="Ama — packaging crema nutritiva"  loading="lazy">
             </div>
             <div class="project-feature__grid-item">
-              <img src="assets/images/branding/ama/packaging_ama_serum.webp"
-                   alt="Ama — packaging sérum antiage"
-                   width="800" height="600" loading="lazy">
+              <img src="assets/images/branding/ama/packaging_ama_serum.webp" alt="Ama — packaging sérum antiage"
+                 loading="lazy">
             </div>
             <div class="project-feature__grid-item">
-              <img src="assets/images/branding/ama/packaging_ama_tonico_facial.webp"
-                   alt="Ama — packaging tónico facial"
-                   width="800" height="600" loading="lazy">
+              <img src="assets/images/branding/ama/packaging_ama_tonico_facial.webp" alt="Ama — packaging tónico facial"
+                 loading="lazy">
             </div>
           </div>
         </article>
@@ -303,9 +371,8 @@
             </p>
           </div>
           <div class="project-feature__hero" data-reveal>
-            <img src="assets/images/branding/she/brand-She.webp"
-                 alt="She — sistema de identidad visual completo"
-                 width="1600" height="900" loading="lazy">
+            <img src="assets/images/branding/she/brand-She.webp" alt="She — sistema de identidad visual completo"
+              width="1600" height="900" loading="lazy">
           </div>
         </article>
 
@@ -324,9 +391,8 @@
             </p>
           </div>
           <div class="project-feature__hero" data-reveal>
-            <img src="assets/images/branding/laca/brand-LACA.webp"
-                 alt="LaCa — sistema de identidad visual completo"
-                 width="1600" height="900" loading="lazy">
+            <img src="assets/images/branding/laca/brand-LACA.webp" alt="LaCa — sistema de identidad visual completo"
+              width="1600" height="900" loading="lazy">
           </div>
         </article>
 
@@ -342,15 +408,34 @@
         <span class="eyebrow">Sobre mí</span>
         <div class="about__grid" data-reveal>
 
-<div class="about__credentials">
-            <p>Diseño con criterio de sistema y pienso en código desde el principio. Más de 10 años en interfaces web y móviles, branding, packaging y manuales de marca — proyectos donde la coherencia visual no es opcional. Trabajo de punta a punta: desde la identidad hasta la implementación front-end. Uso herramientas de IA como parte activa del proceso, sin que reemplacen el juicio. Si llegaste acá, probablemente buscás alguien que entienda tanto el pixel como el componente.</p>
-            <div class="hero__meta hero__meta--offset">
-              <span class="tag tag--skill">Figma</span>
-              <span class="tag tag--skill">HTML/SCSS</span>
-              <span class="tag tag--skill">React</span>
-              <span class="tag tag--skill">Tailwind</span>
-              <span class="tag tag--skill">Illustrator</span>
-              <span class="tag tag--skill">WordPress</span>
+          <div class="about__credentials">
+            <p class="about__bio">
+              <strong>Diseño con criterio de sistema. Implemento con código. Pienso en el producto desde el
+                principio.</strong>
+              <br><br>
+              10+ años trabajando en interfaces web y móviles, branding y packaging — proyectos donde la coherencia
+              visual no es opcional. Trabajo de punta a punta: de la identidad al componente React. Uso IA como parte
+              del proceso, no como atajo.
+              <br><br>
+              <span class="about__differentiator">Lo que me diferencia:</span> cuando entrego un diseño, el equipo de
+              desarrollo no tiene que preguntar. Las especificaciones están, los estados están, los edge cases están.
+            </p>
+            <div class="about__skills">
+              <div class="about__skills-row">
+                <span class="about__skills-category">Diseño</span>
+                <span class="tag tag--skill">Figma</span>
+                <span class="tag tag--skill">Illustrator</span>
+              </div>
+              <div class="about__skills-row">
+                <span class="about__skills-category">Código</span>
+                <span class="tag tag--skill">HTML/SCSS</span>
+                <span class="tag tag--skill">React</span>
+                <span class="tag tag--skill">Tailwind</span>
+              </div>
+              <div class="about__skills-row">
+                <span class="about__skills-category">CMS</span>
+                <span class="tag tag--skill">WordPress</span>
+              </div>
             </div>
           </div>
 
@@ -370,10 +455,14 @@
           <div>
             <span class="eyebrow eyebrow--soft">Contacto</span>
             <h2 class="contact__heading" id="contact-heading">
-              Trabajemos juntos.
+              ¿Tenés un proyecto en mente?
             </h2>
             <p class="contact__sub intro contact__sub--spaced">
-              Abierta a proyectos freelance y oportunidades de frontend.
+              Contame de qué se trata. Respondo en menos de 24 horas.
+            </p>
+            <p class="contact__availability">
+              <span class="contact__availability-dot"></span>
+              Disponible para proyectos freelance
             </p>
           </div>
           <a href="mailto:hola@alejandra.design" class="contact__link">
@@ -404,4 +493,5 @@
   <script src="js/main.js" defer></script>
 
 </body>
+
 </html>
