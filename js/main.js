@@ -67,10 +67,7 @@
 
     const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
 
-    window.scrollTo({ top: targetTop, behavior: 'auto' });
-    requestAnimationFrame(() => {
-      window.scrollTo({ top: targetTop, behavior: 'smooth' });
-    });
+    window.scrollTo({ top: targetTop, behavior: 'smooth' }); // solo esto
   };
 
   links.forEach((link) => {

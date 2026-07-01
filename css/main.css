@@ -31,7 +31,7 @@
   --max-width: 2200px;
   --max-width-md: 1500px;
   --gutter: clamp(1.5rem, 5vw, 4rem);
-  --col-text: 560px;
+  --col-text: 800px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 150ms;
   --duration-base: 250ms;
@@ -588,7 +588,7 @@ figcaption {
   max-width: 800px;
 }
 .about__bio strong {
-  color: var(--color-charge);
+  color: var(--color-stone);
   font-weight: 700;
 }
 .about__skills {
@@ -773,7 +773,7 @@ figcaption {
   transition: color var(--duration-fast) var(--ease-out);
 }
 .site-footer__link:hover {
-  color: var(--color-ink);
+  color: var(--color-charge);
 }
 
 .u-sr-only {
@@ -1064,6 +1064,11 @@ figcaption {
   border: 1px solid var(--color-charge);
   color: var(--color-charge);
 }
+.case-study__badge--muted {
+  color: var(--color-slate);
+  border-color: var(--color-slate);
+  background: transparent;
+}
 .case-study__tags {
   display: flex;
   flex-wrap: wrap;
@@ -1312,6 +1317,9 @@ figcaption {
   * {
     cursor: auto !important;
   }
+}
+.case-study__screen {
+  aspect-ratio: 3/4; /* o el ratio real de tus mockups */
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -417,7 +417,7 @@
     max-width: 800px;
 
     strong {
-      color: var(--color-charge);
+      color: var(--color-stone);
       font-weight: 700;
     }
   }
@@ -628,7 +628,7 @@
     transition: color var(--duration-fast) var(--ease-out);
 
     &:hover {
-      color: var(--color-ink);
+      color: var(--color-charge);
     }
   }
 }
@@ -965,6 +965,12 @@
     padding: 2px var(--space-3);
     border: 1px solid var(--color-charge);
     color: var(--color-charge);
+
+    &--muted {
+      color: var(--color-slate);
+      border-color: var(--color-slate);
+      background: transparent;
+    }
   }
 
   &__tags {
@@ -1255,4 +1261,7 @@
   * {
     cursor: auto !important;
   }
+}
+.case-study__screen {
+  aspect-ratio: 3 / 4; /* o el ratio real de tus mockups */
 }
