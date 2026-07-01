@@ -16,6 +16,13 @@
 // Padding vertical consistente entre bloques
 // -----------------------------------------------------------------------------
 
+.section,
+.hero,
+.case-study,
+.project-feature {
+  scroll-margin-top: 88px;
+}
+
 .section {
   padding-block: var(--space-24);
 

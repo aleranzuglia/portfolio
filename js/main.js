@@ -3,28 +3,6 @@
 // Vanilla JS, sin dependencias. Defer en el HTML.
 // =============================================================================
 
-// Cursor spotlight
-// -----------------------------------------------------------------------------
-const cursor = document.createElement('div');
-cursor.className = 'cursor-spotlight';
-document.body.appendChild(cursor);
-
-let mouseX = 0, mouseY = 0;
-let curX = 0, curY = 0;
-
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
-
-function animateCursor() {
-  curX += (mouseX - curX) * 0.12;
-  curY += (mouseY - curY) * 0.12;
-  cursor.style.transform = `translate(${curX}px, ${curY}px)`;
-  requestAnimationFrame(animateCursor);
-}
-animateCursor();
-
 // Nav: menú hamburguesa para mobile
 // -----------------------------------------------------------------------------
 (function initBurger() {
@@ -50,31 +28,69 @@ animateCursor();
 })();
 
 
-// Nav: active state según sección visible
+// Nav: active state según sección visible + smooth scroll
 // -----------------------------------------------------------------------------
 (function initNavActive() {
   const links = document.querySelectorAll('.site-nav__link');
   const sections = document.querySelectorAll('main section[id]');
 
-  if (!sections.length) return;
+  if (!sections.length || !links.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.getAttribute('id');
-        links.forEach((link) => {
-          link.classList.toggle(
-            'is-active',
-            link.getAttribute('href') === `#${id}`
-          );
-        });
-      });
-    },
-    { rootMargin: '-40% 0px -55% 0px' }
-  );
+  const header = document.querySelector('.site-nav');
+  const offset = header ? header.getBoundingClientRect().height + 16 : 72;
 
-  sections.forEach((section) => observer.observe(section));
+  const setActiveLink = (id) => {
+    links.forEach((link) => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('is-active', href === `#${id}`);
+    });
+  };
+
+  const getActiveSection = () => {
+    const scrollTop = window.scrollY + offset + 8;
+    let current = sections[0];
+
+    sections.forEach((section) => {
+      if (section.offsetTop <= scrollTop) current = section;
+    });
+
+    return current;
+  };
+
+  const updateActiveSection = () => {
+    setActiveLink(getActiveSection().id);
+  };
+
+  const scrollToSection = (targetId) => {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top: targetTop, behavior: 'auto' });
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    });
+  };
+
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href')?.replace(/^#/, '');
+      if (!targetId) return;
+
+      e.preventDefault();
+      setActiveLink(targetId);
+      scrollToSection(targetId);
+
+      if (window.history.pushState) {
+        history.pushState(null, '', `#${targetId}`);
+      }
+    });
+  });
+
+  updateActiveSection();
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+  window.addEventListener('resize', updateActiveSection);
 })();
 
 
