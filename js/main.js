@@ -205,7 +205,7 @@
 (function initRotatingText() {
   const el = document.querySelector('.hero__rotating');
   if (!el) return;
-  const words = ['Branding','Packaging','Web design','UX/UI','Frontend'];
+  const words = ['Apps', 'Web', 'Branding', 'Packaging'];
   let i = 0;
   const style = document.createElement('style');
   style.textContent = `
