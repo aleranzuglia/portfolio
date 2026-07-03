@@ -113,7 +113,6 @@
   }
 }
 
-
 // Hero
 // -----------------------------------------------------------------------------
 
@@ -381,7 +380,6 @@
 }
 
 .about {
-
   &__grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -398,7 +396,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
-    
   }
 
   &__lead {
@@ -450,7 +447,6 @@
   }
 
   &__photo {
-    
     img {
       width: 100%;
       height: auto;
@@ -458,16 +454,6 @@
       border-radius: 4px;
       object-fit: cover;
       object-position: center 20%;
-      filter: grayscale(100%);
-      transition: filter 0.4s ease;
-
-      @media (hover: none) {
-        filter: grayscale(0%);
-      }
-    }
-
-    &:hover img {
-      filter: grayscale(0%);
     }
 
     @media (max-width: 900px) {
@@ -1029,18 +1015,10 @@
       width: 100%;
       height: auto;
       display: block;
-      filter: grayscale(100%);
-      transition:
-        filter 0.4s ease,
-        transform 0.5s ease;
-
-      @media (hover: none) {
-        filter: grayscale(0%);
-      }
+      transition: transform 0.5s ease;
     }
 
     &:hover img {
-      filter: grayscale(0%);
       transform: scale(1.02);
     }
   }
@@ -1294,7 +1272,7 @@
 }
 
 .case-study__phone {
-  flex: 0 0 85%;
+  flex: 0 0 90%;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -1310,16 +1288,10 @@
     display: block;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    filter: grayscale(100%);
-    transition: filter 0.4s ease, transform 0.4s ease;
-
-    @media (hover: none) {
-      filter: grayscale(0%);
-    }
+    transition: transform 0.4s ease;
   }
 
   &:hover img {
-    filter: grayscale(0%);
     transform: translateY(-4px);
   }
 
