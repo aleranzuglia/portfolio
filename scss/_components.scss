@@ -63,7 +63,7 @@
       transform: translateY(-6.5px) rotate(-45deg);
     }
 
-    @media (max-width: 639px) {
+    @media (max-width: 899px) {
       display: flex;
     }
   }
@@ -72,7 +72,7 @@
     display: flex;
     gap: var(--space-8);
 
-    @media (max-width: 639px) {
+    @media (max-width: 899px) {
       display: none;
       flex-direction: column;
       position: fixed;
@@ -102,7 +102,7 @@
       color: var(--color-paper);
     }
 
-    @media (max-width: 639px) {
+    @media (max-width: 899px) {
       font-size: var(--text-xl);
       font-family: var(--font-heading);
       font-weight: 700;
@@ -1261,5 +1261,74 @@
 
   * {
     cursor: auto !important;
+  }
+}
+
+// =============================================================================
+// Case study — phones carousel
+// =============================================================================
+
+.case-study__phones {
+  margin-block: var(--space-5);
+
+  &-track {
+    display: flex;
+    gap: var(--space-4);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-block: var(--space-3);
+    cursor: grab;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    padding-inline-end: 10%;
+  }
+}
+
+.case-study__phone {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  @media (min-width: 768px) {
+    flex: 0 0 46%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+
+    @media (hover: none) {
+      filter: grayscale(0%);
+    }
+  }
+
+  &:hover img {
+    filter: grayscale(0%);
+    transform: translateY(-4px);
+  }
+
+  figcaption {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-slate);
+    text-align: center;
   }
 }

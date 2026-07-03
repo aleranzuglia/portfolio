@@ -340,7 +340,7 @@ figcaption {
 .site-nav__burger.is-open span:nth-child(3) {
   transform: translateY(-6.5px) rotate(-45deg);
 }
-@media (max-width: 639px) {
+@media (max-width: 899px) {
   .site-nav__burger {
     display: flex;
   }
@@ -349,7 +349,7 @@ figcaption {
   display: flex;
   gap: var(--space-8);
 }
-@media (max-width: 639px) {
+@media (max-width: 899px) {
   .site-nav__links {
     display: none;
     flex-direction: column;
@@ -376,7 +376,7 @@ figcaption {
 .site-nav__link:hover, .site-nav__link.is-active {
   color: var(--color-paper);
 }
-@media (max-width: 639px) {
+@media (max-width: 899px) {
   .site-nav__link {
     font-size: var(--text-xl);
     font-family: var(--font-heading);
@@ -1367,3 +1367,66 @@ figcaption {
     cursor: auto !important;
   }
 }
+.case-study__phones {
+  margin-block: var(--space-5);
+}
+.case-study__phones-track {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-block: var(--space-3);
+  cursor: grab;
+  scrollbar-width: none;
+}
+.case-study__phones-track::-webkit-scrollbar {
+  display: none;
+}
+.case-study__phones-track:active {
+  cursor: grabbing;
+}
+.case-study__phones-track {
+  padding-inline-end: 10%;
+}
+
+.case-study__phone {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+@media (min-width: 768px) {
+  .case-study__phone {
+    flex: 0 0 46%;
+  }
+}
+.case-study__phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+@media (hover: none) {
+  .case-study__phone img {
+    filter: grayscale(0%);
+  }
+}
+.case-study__phone:hover img {
+  filter: grayscale(0%);
+  transform: translateY(-4px);
+}
+.case-study__phone figcaption {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-slate);
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
