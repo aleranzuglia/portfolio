@@ -203,7 +203,11 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">El proyecto</h3>
-              <p>Trabajé para modernizar el proceso de relevamiento catastral de la Provincia de Formosa. El sistema existente era de escritorio y obligaba a los agrimensores a volver a la oficina para cargar datos levantados en campo. La nueva versión tenía que funcionar desde el celular del agrimensor y del inspector municipal, operar sin conexión y sincronizar cuando hubiera red. Construí el design system en Figma siguiendo Material Design 3, con componentes, tokens y estados documentados.</p>
+              <p>Trabajé para modernizar el proceso de relevamiento catastral de la Provincia de Formosa. El sistema
+                existente era de escritorio y obligaba a los agrimensores a volver a la oficina para cargar datos
+                levantados en campo. La nueva versión tenía que funcionar desde el celular del agrimensor y del
+                inspector municipal, operar sin conexión y sincronizar cuando hubiera red. Construí el design system en
+                Figma siguiendo Material Design 3, con componentes, tokens y estados documentados.</p>
             </div>
 
             <div class="case-study__screens" data-reveal>
@@ -223,7 +227,10 @@
               <h3 class="case-study__h3">El desafío</h3>
               <p>La app debía servir a dos perfiles de usuario, con necesidades distintas, que operaban sobre el mismo
                 sistema de datos catastral: agrimensores que trabajan en
-                campo bajo el sol y con guantes, e inspectores municipales que operan desde oficina. Los puntos críticos: la autenticación en condiciones de campo, no perder datos si se corta la red, y un proceso de registro de dispositivo que requiere presencia física (y que el usuario no sabe que va a necesitar hasta que ya está ahí). 
+                campo bajo el sol y con guantes, e inspectores municipales que operan desde oficina. Los puntos
+                críticos: la autenticación en condiciones de campo, no perder datos si se corta la red, y un proceso de
+                registro de dispositivo que requiere presencia física (y que el usuario no sabe que va a necesitar hasta
+                que ya está ahí).
               </p>
             </div>
 
@@ -241,7 +248,10 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Proceso</h3>
-              <p>Con el equipo técnico de Igeo Consultora tuvimos reuniones semanales durante cuatro meses. El cliente llegó con wireframes de baja fidelidad en Balsamiq que documentaban los flujos base; traduje esa lógica funcional al lenguaje de diseño: jerarquía de información, estados de error, flujos de edge case y consistencia visual.</p>
+              <p>Con el equipo técnico de Igeo Consultora tuvimos reuniones semanales durante cuatro meses. El cliente
+                llegó con wireframes de baja fidelidad en Balsamiq que documentaban los flujos base; traduje esa lógica
+                funcional al lenguaje de diseño: jerarquía de información, estados de error, flujos de edge case y
+                consistencia visual.</p>
             </div>
 
             <div class="case-study__phones" data-reveal>
@@ -254,11 +264,20 @@
                 <figure class="case-study__phone">
                   <img src="assets/images/uxui/formosa/proto-alta.webp"
                     alt="App Formosa V2 — prototipo de alta fidelidad" width="1920" height="1080" loading="lazy">
-                  <figcaption>Diseño final: autenticación, dashboard y trabajo en campo, con flujos y estados propios.</figcaption>
+                  <figcaption>Diseño final: autenticación, dashboard y trabajo en campo, con flujos y estados propios.
+                  </figcaption>
                 </figure>
               </div>
             </div>
-
+            <div class="case-study__screens case-study__screens--full" data-reveal>
+              <figure class="case-study__screen ">
+                <img src="assets/images/uxui/formosa/App_Formosa_Design_System.webp"
+                  alt="App Formosa — Algunos componentes de sistema de diseño" width="2880" height="6824"
+                  loading="lazy">
+                <figcaption>Algunos componentes del design system.
+                </figcaption>
+              </figure>
+            </div>
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Decisiones de diseño</h3>
               <div class="case-study__decision">
@@ -330,7 +349,7 @@
               <h3 class="case-study__h3">El resultado</h3>
               <p>
                 <strong>126 pantallas de alta fidelidad.</strong>
-                Flujos completos para ambos roles, todos los estados de error posibles, y el proceso completo de
+                Flujos completos para ambos roles, los estados de error del sistema catastral, y el proceso de
                 registro, activación y desregistro de dispositivo.
                 <br><br>
                 El prototipo fue usado directamente como referencia de desarrollo por el equipo técnico de Igeo
@@ -342,8 +361,8 @@
             <div class="case-study__text case-study__text--aprendizaje" data-reveal>
               <h3 class="case-study__h3">Lo que aprendí</h3>
               <p>Diseñar para trabajo de campo impone restricciones que el diseño de escritorio ignora: guantes, sol,
-                conexión intermitente, presión de tiempo. Cada decisión de interacción —tamaño de toque, número de
-                pasos, claridad del estado— tiene consecuencias reales cuando el usuario está parado en el medio de un
+                conexión intermitente, presión de tiempo. Cada decisión de interacción (tamaño de toque, número de
+                pasos, claridad del estado) tiene consecuencias reales cuando el usuario está parado en el medio de un
                 lote en Formosa a 40 grados. Ese contexto físico fue el criterio de validación de cada pantalla.</p>
             </div>
 
@@ -526,7 +545,8 @@
             <div class="case-study__screens case-study__screens--full" data-reveal>
               <div class="case-study__screen ">
                 <img src="assets/images/uxui/metrogas/app-metrogas.webp"
-                  alt="Metrogas GIS mobile — mapa limpio, dial de acciones y sidebar de búsqueda" width="1500" height="1043" loading="lazy">
+                  alt="Metrogas GIS mobile — mapa limpio, dial de acciones y sidebar de búsqueda" width="1500"
+                  height="1043" loading="lazy">
               </div>
             </div>
 
@@ -543,10 +563,23 @@
               <h3 class="case-study__h3">Decisiones de sistema</h3>
               <p>Reemplacé la barra de herramientas fija por un FAB expandible, para que las acciones aparezcan solo
                 cuando hacen falta. La búsqueda por atributos se resolvió con un sidebar deslizable, sin salir de la
-                vista principal. Y documenté cada estado de cada componente —default, hover, disabled— para facilitarle
+                vista principal. Y documenté cada estado de cada componente (default, hover, disabled) para facilitarle
                 el trabajo al equipo de desarrollo.</p>
             </div>
+            <div class="case-study__screens case-study__screens--full" data-reveal>
+              <figure class="case-study__screen ">
+                <img src="assets/images/uxui/metrogas/GIS_Design_System.png"
+                  alt="Metrogas — componentes del sistema de diseño." width="2880" height="4920" loading="lazy">
+                <figcaption>Design System: paleta, tipografía Montserrat, botones, chips, card de producto e íconos
+                  sobre el fondo oscuro de la interfaz.
+                </figcaption>
+              </figure>
+            </div>
 
+            <div class="case-study__text" data-reveal>
+              <p>El proyecto no llegó a producción: Igeo Consultora no logró un acuerdo para avanzar con el
+                lanzamiento.</p>
+            </div>
 
           </div>
         </article>
@@ -584,7 +617,20 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">El proyecto</h3>
-              <p>Diseño y maquetado de un e-commerce de tecnología y electrónica de consumo, a partir del manual de marca que ya tenía el cliente. Antes de maquetar armé un design system en Figma —componentes, tokens, estados— para que las decisiones de diseño quedaran resueltas desde el principio.</p>
+              <p>Diseño y maquetado de un e-commerce de tecnología y electrónica de consumo, a partir del manual de
+                marca que ya tenía el cliente. Antes de maquetar armé un design system en Figma (componentes, tokens,
+                estados) para que las decisiones de diseño quedaran resueltas desde el principio.</p>
+            </div>
+
+            <div class="case-study__screens case-study__screens--full" data-reveal>
+              <figure class="case-study__screen ">
+                <img src="assets/images/uxui/Agon_Design_System.webp"
+                  alt="Agon — componentes del sistema de diseño: colores, tipografía, botones, chips, checkbox, card de producto e íconos"
+                  width="1500" height="4011" loading="lazy">
+                <figcaption>Design System: paleta, tipografía Montserrat, botones, chips, card de producto e íconos
+                  sobre el fondo oscuro de la interfaz.
+                </figcaption>
+              </figure>
             </div>
 
             <div class="case-study__screens case-study__screens--full" data-reveal>
@@ -596,7 +642,9 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Alcance técnico</h3>
-              <p>Maqueté todo en HTML y SCSS, con JavaScript para los filtros de catálogo, el carrito dinámico y las transiciones de interfaz. El proyecto no llegó a lanzarse, pero recorre el proceso completo de un e-commerce real: sistema de diseño, maquetado y lógica de interacción.</p>
+              <p>Maqueté todo en HTML y SCSS, con JavaScript para los filtros de catálogo, el carrito dinámico y las
+                transiciones de interfaz: el circuito completo de un e-commerce real, con sistema de diseño, maquetado
+                y lógica de interacción. AC EASTWAY S.A no avanzó con el lanzamiento.</p>
             </div>
 
           </div>
@@ -643,7 +691,9 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">El desafío</h3>
-              <p>El cliente necesitaba una marca para tres verticales de producto que funcionara como un sistema único en el punto de venta: línea para el hogar, tecnología de consumo y herramientas. El reto fue que cada unatuviera identidad propia sin romper la coherencia de la marca madre.</p>
+              <p>El cliente necesitaba una marca para tres verticales de producto que funcionara como un sistema único
+                en el punto de venta: línea para el hogar, tecnología de consumo y herramientas. El reto fue que cada
+                una tuviera identidad propia sin romper la coherencia de la marca madre.</p>
             </div>
 
             <div class="case-study__screens case-study__screens--full" data-reveal>
@@ -655,7 +705,9 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Arquitectura de color coding</h3>
-              <p>En góndola, un cliente decide en segundos. El rojo identifica línea blanca y tecnología; el azul, herramientas. La grilla no cambia, cambia el color, así que la marca se reconoce aunque el producto sea completamente distinto. Sin leer una etiqueta.</p>
+              <p>En góndola, un cliente decide en segundos. El rojo identifica línea blanca y tecnología; el azul,
+                herramientas. La grilla no cambia, cambia el color, así que la marca se reconoce aunque el producto sea
+                completamente distinto. Sin leer una etiqueta.</p>
             </div>
 
             <div class="case-study__screens" data-reveal>
@@ -671,7 +723,9 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Desarrollo del sistema</h3>
-              <p>Construí un sistema que se adapta a formatos y proporciones de pack muy distintos sin perder consistencia. El manual de marca incluye valores Pantone, CMYK y RGB para producción a gran escala, más pautas para papelería corporativa, entornos digitales y merchandising.</p>
+              <p>Construí un sistema que se adapta a formatos y proporciones de pack muy distintos sin perder
+                consistencia. El manual de marca incluye valores Pantone, CMYK y RGB para producción a gran escala, más
+                pautas para papelería corporativa, entornos digitales y merchandising.</p>
             </div>
 
             <div class="case-study__screens" data-reveal>
@@ -714,7 +768,7 @@
               <dt>Resultado</dt>
               <dd>115.000 seguidores en Instagram</dd>
               <dt>Estado</dt>
-              <dd><span class="case-study__badge">Implementado · En uso</span></dd>
+              <dd><span class="case-study__badge">Implementado</span></dd>
             </dl>
             <div class="case-study__tags">
               <span class="tag">Branding</span>
@@ -728,7 +782,9 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">El desafío</h3>
-              <p>El pedido fue crear desde cero una identidad para un proyecto de análisis político independiente que quería diferenciarse de los medios tradicionales desde el primer posteo. Sin historia previa, sin audiencia, sin referencias visuales propias; solo la idea de un canal plural y moderno.</p>
+              <p>El pedido fue crear desde cero una identidad para un proyecto de análisis político independiente que
+                quería diferenciarse de los medios tradicionales desde el primer posteo. No había historia previa ni
+                audiencia, solo la idea de un canal plural y moderno.</p>
             </div>
 
             <div class="case-study__screens case-study__screens--full" data-reveal>
@@ -740,12 +796,17 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Sistema cromático y tipográfico</h3>
-              <p>Definí una paleta de cuatro colores —cian, magenta, verde y amarillo— sobre un fondo de alto contraste, para que cada voz del canal pudiera tener su color sin que el sistema se fragmentara. El logotipo tiene volumen tridimensional y la tipografía es de impacto, pensada para funcionar en placas de streaming, portadas de video y posteos donde hay que detener el scroll.</p>
+              <p>Definí una paleta de cuatro colores (cian, magenta, verde y amarillo) sobre un fondo de alto contraste,
+                para que cada voz del canal pudiera tener su color sin que el sistema se fragmentara. El logotipo tiene
+                volumen tridimensional y la tipografía es de impacto, pensada para funcionar en placas de streaming,
+                portadas de video y posteos donde hay que detener el scroll.</p>
             </div>
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Desarrollo del sistema</h3>
-              <p>Armé el manual con especificaciones RGB, CMYK y Hex, y definí cómo se aplica la identidad en cada formato: placas en vivo, overlays de streaming, papelería del estudio y merchandising. Hoy el canal tiene 115.000 seguidores en Instagram.</p>
+              <p>Armé el manual con especificaciones RGB, CMYK y Hex, y definí cómo se aplica la identidad en cada
+                formato: placas en vivo, overlays de streaming, papelería del estudio y merchandising. Hoy el canal
+                tiene 115.000 seguidores en Instagram.</p>
             </div>
 
           </div>
@@ -783,7 +844,10 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">El desafío</h3>
-              <p>María Amalia es médica con especialización en ayurveda y fitoterapia, y elabora sus propias preparaciones: cremas, ungüentos, infusiones, sérums, pastas dentales, productos para el cabello. El trabajo fue darle identidad a un microemprendimiento donde el producto lo hace ella misma, sin que la marca se sintiera industrial ni perdiera la calidez de eso.</p>
+              <p>María Amalia es médica con especialización en ayurveda y fitoterapia, y elabora sus propias
+                preparaciones: cremas, ungüentos, infusiones, sérums, pastas dentales, productos para el cabello. El
+                trabajo fue darle identidad a un microemprendimiento donde el producto lo hace ella misma, sin que la
+                marca se sintiera industrial ni perdiera la calidez de eso.</p>
             </div>
 
             <div class="case-study__screens case-study__screens--full" data-reveal>
@@ -814,7 +878,9 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Desarrollo del sistema</h3>
-              <p>El sistema tiene que funcionar en varios tipos y tamaños de frascos y envases, todos hechos en pequeñas tiradas. Documenté la identidad para que pueda imprimir etiquetas nuevas cuando lo necesite, sin depender de un diseñador para cada lote nuevo.</p>
+              <p>El sistema tiene que funcionar en varios tipos y tamaños de frascos y envases, todos hechos en pequeñas
+                tiradas. Documenté la identidad para que pueda imprimir etiquetas nuevas cuando lo necesite, sin
+                depender de un diseñador para cada lote nuevo.</p>
             </div>
 
             <div class="case-study__screens" data-reveal>
@@ -864,7 +930,10 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">El desafío</h3>
-              <p>She organiza bodas destino y congresos corporativos desde San Martín de los Andes, para clientes que buscan el mismo nivel de cuidado que verían en una gran ciudad, pero sin perder la conexión con el paisaje patagónico que eligieron. En 2022 diseñé la marca original; en 2024 el cliente volvió para actualizarla: más calidez, más presencia, misma identidad.</p>
+              <p>She organiza bodas destino y congresos corporativos desde San Martín de los Andes, para clientes que
+                buscan el mismo nivel de cuidado que verían en una gran ciudad, pero sin perder la conexión con el
+                paisaje patagónico que eligieron. En 2022 diseñé la marca original; en 2024 Silvina volvió para
+                actualizarla sin perder lo que ya funcionaba: más calidez, más presencia.</p>
             </div>
 
             <div class="case-study__screens case-study__screens--full" data-reveal>
@@ -876,12 +945,32 @@
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Arquitectura visual y paleta de materiales</h3>
-              <p>En el restyling mantuve la lógica del isotipo original (letras entrelazadas con elementos circulares), pero lo llevé a un registro más orgánico: tipografía con más contraste, líneas más fluidas y una paleta en tierra cálida que reemplazó el gris neutro. La identidad ganó presencia y elegancia.</p>
+              <p>En el restyling mantuve la lógica del isotipo original (letras entrelazadas con elementos circulares),
+                pero lo llevé a un registro más orgánico: tipografía con más contraste, líneas más fluidas y una paleta
+                en tierra cálida que reemplazó el gris neutro. La identidad ganó presencia y elegancia.</p>
+            </div>
+
+            <div class="case-study__phones" data-reveal>
+              <div class="case-study__phones-track">
+                <figure class="case-study__phone">
+                  <img src="assets/images/branding/she/she-antes.webp"
+                    alt="She — antes" width="1920" height="1080" loading="lazy">
+                  <figcaption>Antes: Logotipo original.</figcaption>
+                </figure>
+                <figure class="case-study__phone">
+                  <img src="assets/images/branding/she/she-ahora.webp"
+                    alt="She — después" width="1920" height="1080" loading="lazy">
+                  <figcaption>Ahora: Logotipo actualizado, con isotipo más orgánico y paleta cálida.
+                  </figcaption>
+                </figure>
+              </div>
             </div>
 
             <div class="case-study__text" data-reveal>
               <h3 class="case-study__h3">Desarrollo del sistema</h3>
-              <p>El sistema cubre desde la preventa digital hasta el día del evento. Documenté la reproducción cromática en CMYK, RGB y Hex, y definí cómo se aplica el isotipo en piezas impresas, canales móviles, cartelería del evento y merchandising de la firma.</p>
+              <p>El sistema cubre desde la preventa digital hasta el día del evento. Documenté la reproducción cromática
+                en CMYK, RGB y Hex, y definí cómo se aplica el isotipo en piezas impresas, canales móviles, cartelería
+                del evento y merchandising de la firma.</p>
             </div>
 
           </div>
@@ -907,17 +996,24 @@
             </p>
 
             <p class="about__bio">
-              Llevo más de diez años diseñando para web y mobile, y en paralelo desarrollando marcas y sistemas de packaging para clientes que van de organismos públicos a médicos con microemprendimientos propios. Esa mezcla me obligó a resolver el mismo problema una y otra vez: mantener coherencia visual cuando el equipo, el cliente y los tiempos cambian a mitad de proyecto.
+              Llevo más de diez años diseñando para web y mobile, y en paralelo desarrollando marcas y sistemas de
+              packaging para clientes que van de organismos públicos a médicos con microemprendimientos propios. Esa
+              mezcla me obligó a resolver el mismo problema una y otra vez: mantener coherencia visual cuando el equipo,
+              el cliente y los tiempos cambian a mitad de proyecto.
             </p>
 
             <p class="about__bio">
-              Trabajar cerca del desarrollo front-end me enseñó a distinguir qué decisión de diseño cuesta una tarde y cuál cuesta una semana; eso se traduce en menos idas y vueltas y en entregas que el equipo puede implementar sin interpretar.
+              Trabajar cerca del desarrollo front-end me enseñó a distinguir qué decisión de diseño cuesta una tarde y
+              cuál cuesta una semana; eso se traduce en menos idas y vueltas y en entregas que el equipo puede
+              implementar sin interpretar.
             </p>
             <p class="about__bio">
-              Integro agentes de IA al flujo de trabajo como potenciadores: para acelerar iteraciones, explorar variantes y optimizar código. No reemplazan el criterio de diseño, lo amplifican.
+              Integro agentes de IA al flujo de trabajo para acelerar iteraciones, explorar variantes y optimizar
+              código.
             </p>
             <p class="about__bio">
-             Busco proyectos que generen desafío real, donde pueda aportar criterio, aprender algo nuevo y trabajar en equipo con personas que también se toman en serio lo que hacen.
+              Busco proyectos que generen desafío real, donde pueda aportar criterio, aprender algo nuevo y trabajar en
+              equipo con personas que también se toman en serio lo que hacen.
             </p>
 
             <div class="about__skills">
@@ -968,19 +1064,35 @@
             </h2>
             <p class="contact__sub contact__sub--spaced">
               Estoy disponible para proyectos freelance y abierta a escuchar propuestas.
-              Si tenés algo en mente, un proyecto, una consulta o simplemente querés conocer más de mi trabajo; escribime.
+              Si tenés algo en mente, un proyecto, una consulta o simplemente querés conocer más de mi trabajo;
+              escribime.
             </p>
             <div class="contact__links">
               <a href="mailto:aleranzu@gmail.com" class="contact__link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
                 aleranzu@gmail.com
               </a>
-              <a href="https://wa.me/5492215028341" class="contact__link" target="_blank" rel="noopener" aria-label="WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              <a href="https://wa.me/5492215028341" class="contact__link" target="_blank" rel="noopener"
+                aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                </svg>
                 WhatsApp
               </a>
-              <a href="https://linkedin.com/in/alejandra-ranzuglia" class="contact__link" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <a href="https://linkedin.com/in/alejandra-ranzuglia" class="contact__link" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
                 LinkedIn
               </a>
             </div>
@@ -1001,7 +1113,7 @@
         <nav class="site-footer__links" aria-label="Links externos">
           <a href="https://linkedin.com/in/alejandra-ranzuglia" class="site-footer__link" target="_blank"
             rel="noopener">LinkedIn</a>
-          <a href="https://read.cv/alejandraranzuglia" class="site-footer__link" target="_blank" rel="noopener">CV</a>
+          <!--<a href="https://read.cv/alejandraranzuglia" class="site-footer__link" target="_blank" rel="noopener">CV</a>-->
         </nav>
       </div>
     </div>

@@ -8,7 +8,7 @@
 Portfolio profesional de Alejandra — diseñador UX/UI y desarrollador front-end.
 Stack: HTML + SCSS vanilla. Deployment: GitHub Pages / Netlify.
 Sin frameworks JS. Sin dependencias de build complejas.
-Fuentes: Barlow Condensed + Cutive Mono via Google Fonts (preconnect + font-display:swap).
+Fuentes: Barlow Condensed + Courier Prime via Google Fonts (preconnect + font-display:swap).
 
 ## Arquitectura de archivos
 
@@ -43,10 +43,10 @@ portfolio/
   --color-charge: #C8FA64;   // acento — máximo 2-3 usos por página
 
   // Tipografía
-  // --font-heading: Barlow Condensed — display e headings (cargada via Google Fonts)
-  // --font-body:    Cutive Mono — body, labels, eyebrows, captions (cargada via Google Fonts)
+  // --font-heading: Barlow Condensed, display e headings (cargada via Google Fonts)
+  // --font-body:    Courier Prime, body, labels, eyebrows, captions (cargada via Google Fonts)
   --font-heading: 'Barlow Condensed', sans-serif;
-  --font-body:    'Cutive Mono', monospace;
+  --font-body:    'Courier Prime', 'Courier New', monospace;
 
   // Roles tipográficos
   // h1 hero:        --font-heading, weight 700, clamp(2.8rem, 7vw, 4.5rem), ls -0.01em, lh 1.0

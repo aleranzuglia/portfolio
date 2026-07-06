@@ -36,7 +36,10 @@
     display: none;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
+    min-width: 44px;
+    min-height: 44px;
     background: none;
     border: none;
     cursor: pointer;
@@ -94,7 +97,7 @@
     font-size: var(--text-md);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     transition: color var(--duration-fast) var(--ease-out);
 
     &:hover,
@@ -235,7 +238,7 @@
     }
 
     &__title {
-      color: var(--color-slate);
+      color: rgba(var(--color-paper-rgb), 0.6);
       transform: translateY(-4px);
 
       &::after {
@@ -293,7 +296,7 @@
     font-family: var(--font-body);
     font-size: var(--text-sm);
     line-height: 1.7;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     max-width: var(--col-text);
   }
 
@@ -355,7 +358,7 @@
     font-size: var(--text-xs);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     white-space: nowrap;
   }
 
@@ -410,7 +413,7 @@
     font-family: var(--font-body);
     font-size: var(--text-base);
     line-height: 1.75;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     max-width: 800px;
 
     strong {
@@ -441,7 +444,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     min-width: 68px;
     margin-right: var(--space-1);
   }
@@ -482,14 +485,14 @@
     font-size: var(--text-xs);
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
   }
 
   &__desc {
     font-family: var(--font-body);
     font-size: var(--text-sm);
     line-height: 1.7;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     margin-top: var(--space-2);
   }
 }
@@ -605,7 +608,7 @@
     font-family: var(--font-body);
     font-size: var(--text-xs);
     letter-spacing: 0.04em;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
   }
 
   &__links {
@@ -618,7 +621,7 @@
     font-size: var(--text-xs);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     transition: color var(--duration-fast) var(--ease-out);
 
     &:hover {
@@ -653,7 +656,7 @@
   font-family: var(--font-body);
   font-size: var(--text-xs);
   letter-spacing: 0.08em;
-  color: var(--color-slate);
+  color: rgba(var(--color-paper-rgb), 0.6);
   margin-bottom: var(--space-8);
   display: block;
 }
@@ -751,7 +754,7 @@
   letter-spacing: 0.06em;
   padding: var(--space-1) var(--space-3);
   border: 1px solid var(--color-stone);
-  color: var(--color-slate);
+  color: rgba(var(--color-paper-rgb), 0.6);
   line-height: 1;
 
   &--skill {
@@ -961,7 +964,9 @@
     color: var(--color-charge);
 
     &--muted {
-      color: var(--color-slate);
+      // color-slate puro sobre color-ink no llega a 4.5:1 de contraste (WCAG AA).
+      // Mismo tratamiento que .hero__meta-label / .tag: paper al 60% sobre ink.
+      color: rgba(var(--color-paper-rgb), 0.6);
       border-color: var(--color-slate);
       background: transparent;
     }
@@ -1308,7 +1313,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-slate);
+    color: rgba(var(--color-paper-rgb), 0.6);
     text-align: center;
   }
 }
