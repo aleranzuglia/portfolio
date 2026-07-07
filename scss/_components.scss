@@ -1005,6 +1005,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
     align-items: start;
+    margin-top: var(--space-8);
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
@@ -1025,6 +1026,7 @@
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 24px 60px var(--color-shadow-strong);
+    margin-bottom: var(--space-8);
 
     img {
       width: 100%;
