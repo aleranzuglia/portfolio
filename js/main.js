@@ -202,10 +202,39 @@
 })();
 
 
+// Case study — apertura/cierre animado de "Ver caso completo"
+// Intercepta el toggle nativo de <details> para poder animar la altura
+// (grid-template-rows 0fr→1fr en .case-study__more-body vía clase .is-open).
+// -----------------------------------------------------------------------------
+(function initCaseStudyMore() {
+  document.querySelectorAll('.case-study__more').forEach((details) => {
+    const summary = details.querySelector(':scope > summary');
+    if (!summary) return;
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (details.open) {
+        details.classList.remove('is-open');
+        const onEnd = (ev) => {
+          if (ev.propertyName !== 'grid-template-rows') return;
+          details.open = false;
+          details.removeEventListener('transitionend', onEnd);
+        };
+        details.addEventListener('transitionend', onEnd);
+      } else {
+        details.open = true;
+        requestAnimationFrame(() => details.classList.add('is-open'));
+      }
+    });
+  });
+})();
+
+
 (function initRotatingText() {
   const el = document.querySelector('.hero__rotating');
   if (!el) return;
-  const words = ['Apps', 'Web', 'Branding', 'Packaging'];
+  const words = ['Diseño de producto', 'Branding'];
   let i = 0;
   const style = document.createElement('style');
   style.textContent = `

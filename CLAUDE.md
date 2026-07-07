@@ -288,6 +288,22 @@ git push origin main
 - No inventar tokens fuera de `_tokens.scss`
 - No agregar clases de utilidad sin prefijo `.u-`
 - No usar `!important` (excepto en reset)
-- No animar `width`, `height`, `top`, `left` — solo `transform` y `opacity`
+- No animar `width`, `height`, `top`, `left` — solo `transform` y `opacity`.
+  Excepción: `grid-template-rows` (ver "Excepciones a las reglas" abajo).
 - No cargar fuentes de Google Fonts
 - No poner lógica en `main.scss` — solo `@forward`
+
+## Excepciones a las reglas (documentadas a propósito)
+
+Regla general: micro-transiciones y animaciones sutiles son bienvenidas siempre
+que no distraigan y sumen pulido — no hace falta pedir permiso para agregarlas,
+pero si rompen una regla de arriba, documentarlo acá con el motivo.
+
+- **`.case-study__more-body` anima `grid-template-rows` (0fr → 1fr)`**, no
+  `transform`/`opacity`. Motivo: el colapsable "Ver caso completo" usa
+  `<details>/<summary>` nativo, que no tiene forma de animar su apertura vía
+  `transform`/`opacity` (el contenido pasa de `display:none` a `block` de
+  golpe). La técnica grid-rows es el único método ampliamente soportado para
+  animar una altura de `auto` sin JS de medición de píxeles. El toggle nativo
+  se intercepta en `initCaseStudyMore` (`main.js`) para sincronizar la clase
+  `.is-open` con el atributo `open` real.
