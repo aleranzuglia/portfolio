@@ -10,7 +10,7 @@
   top: 0;
   z-index: 100;
   background-color: var(--color-ink);
-  border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.6);
+  border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.3);
 
   &__inner {
     display: flex;
@@ -127,7 +127,7 @@
   justify-content: space-between;
   padding: var(--space-16) var(--gutter);
   padding-top: calc(52px + var(--space-12));
-  border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.6);
+  border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.3);
 
   &__number {
     font-family: var(--font-body);
@@ -160,7 +160,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     background-color: rgba(var(--color-paper-rgb), 0.6);
-    border-top: 1px solid rgba(var(--color-paper-rgb), 0.6);
+    border-top: 1px solid rgba(var(--color-paper-rgb), 0.3);
     margin-top: var(--space-16);
 
     @media (max-width: 767px) {
@@ -473,7 +473,7 @@
   flex-direction: column;
   gap: var(--space-1);
   padding-top: var(--space-4);
-  border-top: 1px solid rgba(var(--color-paper-rgb), 0.6);
+  border-top: 1px solid rgba(var(--color-paper-rgb), 0.3);
 
   &__role {
     font-family: var(--font-heading);
@@ -502,7 +502,6 @@
 .contact {
   background-color: var(--color-ink);
   color: var(--color-paper);
- 
 
   &__inner {
     display: flex;
@@ -576,7 +575,6 @@
     gap: var(--space-8);
     margin-top: var(--space-12);
   }
-
 }
 
 @keyframes pulse-dot {
@@ -673,12 +671,12 @@
     align-items: center;
     gap: var(--space-6);
     padding: var(--space-6) 0;
-    border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.6);
+    border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.3);
     cursor: pointer;
     transition: opacity var(--duration-base) var(--ease-out);
 
     &:first-child {
-      border-top: 1px solid rgba(var(--color-paper-rgb), 0.6);
+      border-top: 1px solid rgba(var(--color-paper-rgb), 0.3);
     }
 
     &:hover {
@@ -886,7 +884,7 @@
 
 .project-divider {
   border: none;
-  border-top: 1px solid rgba(var(--color-paper-rgb), 0.6);
+  border-top: 1px solid rgba(var(--color-paper-rgb), 0.3);
   margin-block: 0;
 }
 
@@ -1005,7 +1003,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
     align-items: start;
-    margin-top: var(--space-8);
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
@@ -1044,7 +1041,7 @@
     max-width: 75%;
     display: flex;
     flex-direction: column;
-    gap: var(--space-6);
+    gap: var(--space-4);
     margin-inline: auto;
 
     @media (max-width: 767px) {
@@ -1064,6 +1061,7 @@
       columns: 1;
       border-left: 2px solid var(--color-charge);
       padding-left: var(--space-8);
+      margin-top: var(--space-8);
     }
   }
 
@@ -1073,19 +1071,15 @@
     font-size: var(--text-xl);
     color: var(--color-paper);
     letter-spacing: -0.005em;
-    margin-bottom: var(--space-3);
     line-height: 1.25;
   }
 
   &__decision {
     break-inside: avoid;
     padding: var(--space-6) 0;
-    border-top: 1px solid rgba(var(--color-paper-rgb), 0.6);
+    border-top: 1px solid rgba(var(--color-paper-rgb), 0.3);
 
-    &:last-child {
-      border-bottom: 1px solid rgba(var(--color-paper-rgb), 0.6);
-    }
-
+   
     h4 {
       font-family: var(--font-heading);
       font-weight: 600;
@@ -1268,7 +1262,7 @@
 // =============================================================================
 
 .case-study__phones {
-  margin-block: var(--space-5);
+  margin-block: var(--space-8);
 
   &-track {
     display: flex;
@@ -1396,7 +1390,8 @@
     background-color: var(--color-charge);
     padding: var(--space-3) var(--space-6);
     border-radius: 9999px;
-    transition: transform var(--duration-fast) var(--ease-out),
+    transition:
+      transform var(--duration-fast) var(--ease-out),
       box-shadow var(--duration-fast) var(--ease-out);
 
     &::-webkit-details-marker {
@@ -1404,7 +1399,7 @@
     }
 
     &::before {
-      content: '+';
+      content: "+";
       font-family: var(--font-body);
       font-size: var(--text-base);
       line-height: 1;
@@ -1430,7 +1425,7 @@
   }
 
   &[open] > summary::before {
-    content: '−';
+    content: "−";
   }
 
   > :not(summary) {
@@ -1442,17 +1437,26 @@
 // Excepción a la regla de "solo transform/opacity" (CLAUDE.md): height/rows
 // no se puede evitar acá porque <details> no anima de forma nativa; ver nota
 // en CLAUDE.md § Lo que NO hacer.
-.case-study__more-body {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--duration-base) var(--ease-out);
-}
+.case-study {
+  &__more-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--duration-base) var(--ease-out);
+  }
+  &__more-inner {
+    overflow: hidden;
+    min-height: 0;
 
-.case-study__more-inner {
-  overflow: hidden;
-  min-height: 0;
-}
+    &__text {
+      margin-top: var(--space-8);
+    }
 
-.case-study__more.is-open > .case-study__more-body {
-  grid-template-rows: 1fr;
+    .case-study__screens {
+      margin-top: var(--space-8);
+    }
+  }
+
+  &__more.is-open > .case-study__more-body {
+    grid-template-rows: 1fr;
+  }
 }
