@@ -531,6 +531,7 @@
 
   &__link {
     display: flex;
+    align-items: center;
     gap: var(--space-3);
     font-family: var(--font-body);
     font-size: var(--text-xs);
@@ -540,10 +541,18 @@
     border-bottom: 1px solid var(--color-charge);
     padding-bottom: var(--space-1);
     white-space: nowrap;
-    transition: opacity var(--duration-fast) var(--ease-out);
+    transition: transform var(--duration-base) var(--ease-out);
+
+    svg {
+      transition: transform var(--duration-base) var(--ease-out);
+    }
 
     &:hover {
-      opacity: 0.75;
+      transform: translateX(var(--space-3));
+
+      svg {
+        transform: rotate(-10deg) scale(1.12);
+      }
     }
   }
 

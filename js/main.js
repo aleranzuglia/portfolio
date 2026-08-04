@@ -110,6 +110,7 @@
       transition:
         opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transition-delay: var(--reveal-delay, 0ms);
     }
     [data-reveal].is-visible {
       opacity: 1;
@@ -118,14 +119,22 @@
   `;
   document.head.appendChild(style);
 
+  // Elementos que entran al viewport en la misma tanda (misma llamada del
+  // observer) se escalonan entre sí; los que entran solos por scroll normal
+  // no llevan delay extra — ya vienen naturalmente espaciados por el scroll.
+  const STAGGER_STEP = 90;  // ms
+  const STAGGER_MAX = 4;    // tope de escalones para no alargar tandas largas
+
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+      entries
+        .filter((entry) => entry.isIntersecting)
+        .forEach((entry, i) => {
+          const delay = Math.min(i, STAGGER_MAX) * STAGGER_STEP;
+          entry.target.style.setProperty('--reveal-delay', `${delay}ms`);
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
-        }
-      });
+        });
     },
     { threshold: 0.08 }
   );
@@ -139,13 +148,30 @@
   const previewImg = document.getElementById('projectPreviewImg');
   const items = document.querySelectorAll('.project-list__item[data-preview]');
   if (!preview || !items.length) return;
+
   let mouseX = 0, mouseY = 0;
+  let previewX = 0, previewY = 0;
+  let tracking = false;
+
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    preview.style.left = (mouseX + 24) + 'px';
-    preview.style.top = (mouseY - 80) + 'px';
+    if (!tracking) {
+      previewX = mouseX;
+      previewY = mouseY;
+      tracking = true;
+    }
   });
+
+  function animatePreview() {
+    previewX += (mouseX - previewX) * 0.18;
+    previewY += (mouseY - previewY) * 0.18;
+    preview.style.left = (previewX + 24) + 'px';
+    preview.style.top = (previewY - 80) + 'px';
+    requestAnimationFrame(animatePreview);
+  }
+  animatePreview();
+
   items.forEach(item => {
     item.addEventListener('mouseenter', () => {
       const src = item.dataset.preview;
@@ -189,37 +215,80 @@
 })();
 
 
+// Texto rotativo del hero — cada palabra se arma letra por letra,
+// intercambiando caracteres al azar antes de asentarse (como el conteo
+// animado de initCounters, pero por caracter en vez de por dígito).
+// -----------------------------------------------------------------------------
 (function initRotatingText() {
   const el = document.querySelector('.hero__rotating');
+  const liveEl = document.querySelector('.hero__rotating-live');
   if (!el) return;
+
   const words = ['Diseño de producto', 'Branding'];
+  const scrambleChars = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz';
   let i = 0;
+  let frameId;
+
   const style = document.createElement('style');
   style.textContent = `
-    @keyframes wordSlideIn {
-      from { transform: translateY(110%); opacity: 0; }
-      to   { transform: translateY(0);    opacity: 1; }
-    }
     .hero__rotating {
       display: inline-block;
       overflow: visible;
       vertical-align: bottom;
       padding-bottom: 0.15em;
     }
-    .hero__rotating.is-animating {
-      animation: wordSlideIn 0.45s cubic-bezier(0.16,1,0.3,1) forwards;
-    }
   `;
   document.head.appendChild(style);
-  function next() {
-    el.classList.remove('is-animating');
-    void el.offsetWidth;
-    i = (i + 1) % words.length;
-    el.textContent = words[i];
-    el.classList.add('is-animating');
+
+  function scrambleTo(target) {
+    const from = el.textContent;
+    const length = Math.max(from.length, target.length);
+    const queue = [];
+
+    for (let idx = 0; idx < length; idx++) {
+      const start = Math.floor(Math.random() * 8);
+      queue.push({
+        fromChar: from[idx] || '',
+        toChar: target[idx] || '',
+        start,
+        end: start + Math.floor(Math.random() * 10) + 6,
+      });
+    }
+
+    cancelAnimationFrame(frameId);
+    let frame = 0;
+
+    function update() {
+      let output = '';
+      let settled = 0;
+
+      queue.forEach(({ fromChar, toChar, start, end }) => {
+        if (frame >= end) {
+          settled++;
+          output += toChar;
+        } else if (frame >= start) {
+          output += toChar === ' ' ? ' ' : scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+        } else {
+          output += fromChar;
+        }
+      });
+
+      el.textContent = output;
+      if (settled === queue.length) {
+        if (liveEl) liveEl.textContent = target;
+        return;
+      }
+      frame++;
+      frameId = requestAnimationFrame(update);
+    }
+    update();
   }
-  el.classList.add('is-animating');
-  setInterval(next, 2200);
+
+  scrambleTo(words[0]);
+  setInterval(() => {
+    i = (i + 1) % words.length;
+    scrambleTo(words[i]);
+  }, 2400);
 })();
 
 
