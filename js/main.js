@@ -91,48 +91,6 @@
 })();
 
 
-// Custom cursor — spotlight radial que sigue el mouse
-// -----------------------------------------------------------------------------
-(function initSpotlightCursor() {
-  const spotlight = document.createElement('div');
-  spotlight.style.cssText = `
-    position: fixed;
-    pointer-events: none;
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,250,100,0.06) 0%, transparent 70%);
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-  `;
-  document.body.appendChild(spotlight);
-
-  let targetX = 0, targetY = 0;
-  let currentX = 0, currentY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    targetX = e.clientX;
-    targetY = e.clientY;
-    spotlight.style.opacity = '1';
-  });
-
-  function animate() {
-    currentX += (targetX - currentX) * 0.08;
-    currentY += (targetY - currentY) * 0.08;
-    spotlight.style.left = currentX + 'px';
-    spotlight.style.top = currentY + 'px';
-    requestAnimationFrame(animate);
-  }
-  animate();
-
-  document.addEventListener('mouseleave', () => {
-    spotlight.style.opacity = '0';
-  });
-})();
-
-
 // Scroll reveal — fade + translate para elementos con [data-reveal]
 // Uso en HTML: <div data-reveal> ... </div>
 // -----------------------------------------------------------------------------
@@ -300,6 +258,8 @@
 // -----------------------------------------------------------------------------
 (function initCustomCursor() {
   if (window.matchMedia('(hover: none)').matches) return;
+
+  document.documentElement.classList.add('has-custom-cursor');
 
   var cursorDot = document.createElement('div');
   cursorDot.className = 'cursor-dot';
